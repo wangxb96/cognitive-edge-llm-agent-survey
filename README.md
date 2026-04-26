@@ -448,7 +448,7 @@ This section expands coverage using bibkey-verified entries from the manuscript 
 | On-device benchmarking | `murthy2024mobileaibench`, `laskaridismobile`, `xiao2024understanding` | B/F |
 | Quantization for deployment | `jacob2018quantization`, `frantar2023gptq`, `tan2024mobilequant`, `qlora2023` | C |
 | Serving/runtime optimization | `kwon2023efficient`, `dao2024flashattention`, `li2024eagle`, `zhao2024qspec` | C |
-| Edge-cloud offloading | `tian2024edge`, `jin2025collm`, `yuan2025local` | C |
+| Edge-cloud offloading | `tian2024edge`, `jin2024collm`, `yuan2025local` | C |
 | Agent tool-use and control | `shen2023hugginggpt`, `han2024llm`, `gao2025survey` | D |
 | SLM for agentic deployment | `belcak2025small`, `lu2024small`, `van2024survey` | A/D |
 | Privacy and governance | `dwork2014algorithmic`, `carlini2021extracting`, `han2024llm` | B/F |
