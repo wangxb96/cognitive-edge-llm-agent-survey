@@ -19,14 +19,15 @@ A bilingual, high-density survey README for Cognitive Edge Computing research.
 11. [Extended Coverage: Additional 52 Manuscript References | 扩展覆盖：来自主稿的 52 条补充文献](#extended-coverage-additional-52-manuscript-references--扩展覆盖来自主稿的-52-条补充文献)
 12. [New Literature Batch-II (2024-2025): 30 Additional Papers | 新文献批次II（2024-2025）：新增30篇](#new-literature-batch-ii-2024-2025-30-additional-papers--新文献批次ii2024-2025新增30篇)
 13. [New Literature Batch-III (Curated, Edge-First): 27 Additional Papers | 新文献批次III（精选，边缘优先）：新增27篇](#new-literature-batch-iii-curated-edge-first-27-additional-papers--新文献批次iii精选边缘优先新增27篇)
-14. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
-15. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
-16. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
-17. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
-18. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
-19. [Citation | 引用信息](#citation--引用信息)
-20. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
-21. [License | 许可证](#license--许可证)
+14. [Authenticity Ledger for Batch-II/III | 批次II/III真实性台账](#authenticity-ledger-for-batch-iiiii--批次iiiii真实性台账)
+15. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
+16. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
+17. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
+18. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
+19. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
+20. [Citation | 引用信息](#citation--引用信息)
+21. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
+22. [License | 许可证](#license--许可证)
 
 ## Executive Summary | 执行摘要
 
@@ -427,6 +428,72 @@ This section expands coverage using bibkey-verified entries from the manuscript 
 | M-25 | `wang2025empowering` | 2025 | Empowering edge intelligence: A comprehensive survey on on-device ai models | ACM Computing Surveys |
 | M-26 | `zhao2025mobilellm` | 2025 | MobileLLM-R1: Exploring the Limits of Sub-Billion Language Model Reasoners with Open Training Recipes | arXiv preprint arXiv:2509.24945 |
 | M-27 | `yang2025mobileviclip` | 2025 | MobileViCLIP: An Efficient Video-Text Model for Mobile Devices | arXiv preprint arXiv:2508.07312 |
+
+## Authenticity Ledger for Batch-II/III | 批次II/III真实性台账
+
+All items below are mapped to the manuscript bibliography source.
+
+下表逐条映射到主稿参考文献来源，便于审稿和复核。
+
+| BibKey | Year | Link | Source | Status |
+|---|---|---|---|---|
+| `amp4ec` | 2025 | https://arxiv.org/abs/2504.00407 | `references.bib` | matched |
+| `andong2025federated` | 2025 | https://arxiv.org/abs/2509.10163 | `references.bib` | matched |
+| `bohdal2025efficient` | 2025 | https://arxiv.org/abs/2507.16083 | `references.bib` | matched |
+| `chen2025inference` | 2025 | https://arxiv.org/abs/2508.11269 | `references.bib` | matched |
+| `chiu2025v2v` | 2025 | https://arxiv.org/abs/2502.09980 | `references.bib` | matched |
+| `faghri2025mobileclip2` | 2025 | https://arxiv.org/abs/2508.20691 | `references.bib` | matched |
+| `fan2025parallel` | 2025 | https://arxiv.org/abs/2506.03296 | `references.bib` | matched |
+| `fang2025federated` | 2025 | https://arxiv.org/abs/2501.19389 | `references.bib` | matched |
+| `frantar2025marlin` | 2025 | N/A | `references.bib` | matched |
+| `guo2025deepseek` | 2025 | https://doi.org/10.1038/s41586-025-09422-z | `references.bib` | matched |
+| `hu2025llm` | 2025 | N/A | `references.bib` | matched |
+| `huang2025vinci` | 2025 | N/A | `references.bib` | matched |
+| `jin2025innovative` | 2025 | https://arxiv.org/abs/2502.11659 | `references.bib` | matched |
+| `joshi2025neuro` | 2025 | https://arxiv.org/abs/2501.19259 | `references.bib` | matched |
+| `kong2025quantum` | 2025 | https://arxiv.org/abs/2503.12790 | `references.bib` | matched |
+| `lee2025paise` | 2025 | N/A | `references.bib` | matched |
+| `li2025cusmer` | 2025 | N/A | `references.bib` | matched |
+| `li2025next` | 2025 | https://arxiv.org/abs/2505.05794 | `references.bib` | matched |
+| `li2025pushing` | 2025 | N/A | `references.bib` | matched |
+| `li2025qpart` | 2025 | https://arxiv.org/abs/2506.23934 | `references.bib` | matched |
+| `li2025urban` | 2025 | N/A | `references.bib` | matched |
+| `liu2025ops` | 2025 | N/A | `references.bib` | matched |
+| `lu2025bluelm` | 2025 | N/A | `references.bib` | matched |
+| `mao2025deepwriter` | 2025 | https://arxiv.org/abs/2507.14189 | `references.bib` | matched |
+| `pan2025instattention` | 2025 | N/A | `references.bib` | matched |
+| `qu2025mobile` | 2025 | N/A | `references.bib` | matched |
+| `ravichandran2025distilling` | 2025 | https://arxiv.org/abs/2506.17486 | `references.bib` | matched |
+| `sakib2025small` | 2025 | https://arxiv.org/abs/2505.19529 | `references.bib` | matched |
+| `seo2025facil` | 2025 | N/A | `references.bib` | matched |
+| `sun2025disco` | 2025 | https://arxiv.org/abs/2502.11417 | `references.bib` | matched |
+| `cheng2024autoiot` | 2024 | N/A | `references.bib` | matched |
+| `xue2024powerinfer` | 2024 | https://arxiv.org/abs/2406.06282 | `references.bib` | matched |
+| `xu2024edgellm` | 2024 | N/A | `references.bib` | matched |
+| `li2024federated` | 2024 | N/A | `references.bib` | matched |
+| `cai2024self` | 2024 | N/A | `references.bib` | matched |
+| `ma2024one` | 2024 | N/A | `references.bib` | matched |
+| `oliinyk2024fuzzing` | 2024 | N/A | `references.bib` | matched |
+| `wei2025t` | 2025 | N/A | `references.bib` | matched |
+| `kong2024swapmoe` | 2024 | N/A | `references.bib` | matched |
+| `chen2024understanding` | 2024 | N/A | `references.bib` | matched |
+| `hu2024realizing` | 2024 | N/A | `references.bib` | matched |
+| `xu2024towards` | 2024 | N/A | `references.bib` | matched |
+| `zhang2024edgeshard` | 2024 | N/A | `references.bib` | matched |
+| `xu2025fast` | 2025 | N/A | `references.bib` | matched |
+| `yu2024cambricon` | 2024 | N/A | `references.bib` | matched |
+| `ren2024industrial` | 2024 | N/A | `references.bib` | matched |
+| `zhang2025vavlm` | 2025 | N/A | `references.bib` | matched |
+| `rivkin2024aiot` | 2024 | N/A | `references.bib` | matched |
+| `yang2025quality` | 2025 | N/A | `references.bib` | matched |
+| `chen2024autoos` | 2024 | N/A | `references.bib` | matched |
+| `cai2025prompt` | 2025 | N/A | `references.bib` | matched |
+| `minicpm-v4` | 2024 | https://arxiv.org/abs/2408.01800 | `references.bib` | matched |
+| `sun2025lincoln` | 2025 | N/A | `references.bib` | matched |
+| `tian2025clone` | 2025 | https://arxiv.org/abs/2506.02847 | `references.bib` | matched |
+| `wang2025empowering` | 2025 | N/A | `references.bib` | matched |
+| `zhao2025mobilellm` | 2025 | https://arxiv.org/abs/2509.24945 | `references.bib` | matched |
+| `yang2025mobileviclip` | 2025 | https://arxiv.org/abs/2508.07312 | `references.bib` | matched |
 
 ## Timeline by Year | 按年份时间线
 
