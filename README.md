@@ -1,204 +1,298 @@
-# Cognitive Edge LLM-Agent Survey
+# Cognitive Edge Computing Literature Hub: A Comprehensive Taxonomy and Professional Survey Map for Optimizing Large Language Models and AI Agents for Pervasive Device-Edge-Cloud Deployment
 
-Professional taxonomy and reading map for Cognitive Edge Computing research on Large Language Models (LLMs) and AI Agents.
+A bilingual, high-density survey README for Cognitive Edge Computing research.
 
-认知边缘计算（LLM 与 AI Agent）综述的专业分类、阅读地图与引用索引。
+面向认知边缘计算研究的中英双语高信息密度综述主页。
 
 ## Table of Contents | 目录
 
-1. [Overview | 项目概述](#overview--项目概述)
-2. [Survey Scope | 综述范围](#survey-scope--综述范围)
-3. [Taxonomy at a Glance | 分类总览](#taxonomy-at-a-glance--分类总览)
-4. [Detailed Taxonomy and References | 分类详情与参考文献](#detailed-taxonomy-and-references--分类详情与参考文献)
-5. [Recommended Evaluation Metrics | 推荐评测指标](#recommended-evaluation-metrics--推荐评测指标)
-6. [Paper Citation | 论文引用](#paper-citation--论文引用)
-7. [How to Maintain This README | README 维护规范](#how-to-maintain-this-readme--readme-维护规范)
-8. [License | 许可证](#license--许可证)
+1. [Executive Summary | 执行摘要](#executive-summary--执行摘要)
+2. [Scope and Positioning | 研究范围与定位](#scope-and-positioning--研究范围与定位)
+3. [Taxonomy Framework | 分类框架](#taxonomy-framework--分类框架)
+4. [Category A: Foundations and System Context | 类别A基础与系统背景](#category-a-foundations-and-system-context--类别a基础与系统背景)
+5. [Category B: Deployment Challenges | 类别B部署挑战](#category-b-deployment-challenges--类别b部署挑战)
+6. [Category C: Optimization Strategies | 类别C优化策略](#category-c-optimization-strategies--类别c优化策略)
+7. [Category D: Agentic Intelligence and Collaboration | 类别D智能体与协同](#category-d-agentic-intelligence-and-collaboration--类别d智能体与协同)
+8. [Category E: Application Domains | 类别E应用场景](#category-e-application-domains--类别e应用场景)
+9. [Category F: Evaluation, Security, and Governance | 类别F评测安全与治理](#category-f-evaluation-security-and-governance--类别f评测安全与治理)
+10. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
+11. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
+12. [Citation | 引用信息](#citation--引用信息)
+13. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
+14. [License | 许可证](#license--许可证)
 
-## Overview | 项目概述
-
-This repository provides a single-file, academically structured survey layout for edge-side LLM and agent systems.
-It is designed for researchers and practitioners who need:
-
-- a clean taxonomy of cognitive edge computing,
-- representative references under each category,
-- reproducibility-oriented reporting guidance,
-- and citation-ready paper information.
-
-本仓库采用单 README 学术化布局，面向边缘侧大模型与智能体研究，提供：
-
-- 清晰的分类体系，
-- 每个分类下的代表文献，
-- 面向复现的评测建议，
-- 可直接使用的论文引用信息。
-
-## Survey Scope | 综述范围
+## Executive Summary | 执行摘要
 
 ### EN
 
-The survey focuses on capability preservation under constrained budgets:
-
-- compute and memory limits,
-- tail latency and service stability,
-- energy and thermal envelopes,
-- privacy, safety, and governance constraints,
-- device-edge-cloud collaborative deployment.
+This repository is built as a professional literature map for Cognitive Edge Computing, where LLMs and AI agents are deployed under strict constraints of memory, latency, energy, safety, and privacy. The core viewpoint is budget-first capability preservation: retain reasoning and autonomous behavior under realistic device-edge-cloud conditions rather than chasing single benchmark numbers.
 
 ### 中文
 
-综述重点关注“预算约束下的能力保持”，包括：
+本仓库以专业综述导航的形式组织认知边缘计算文献，关注大模型与智能体在内存、时延、能耗、安全和隐私约束下的实际部署。核心观点是“预算优先的能力保持”：在真实端-边-云条件下保持推理与自治能力，而不是追求单一基准分数。
 
-- 算力与内存限制，
-- 尾时延与服务稳定性，
-- 能耗与热约束，
-- 隐私、安全与治理要求，
-- 端-边-云协同部署。
+## Scope and Positioning | 研究范围与定位
 
-## Taxonomy at a Glance | 分类总览
+- Focus models: LLM, SLM, multimodal LLM, MoE-based edge models
+- Focus systems: on-device inference, edge serving, edge-cloud collaboration, agent tool loops
+- Focus objectives: reasoning fidelity, cost/energy efficiency, latency stability, reproducibility, governance
+- Time span: representative works from classical edge computing foundations to recent 2024-2025 edge LLM/agent literature
 
-| Category | Focus (EN) | 中文要点 |
+## Taxonomy Framework | 分类框架
+
+```text
+A. Foundations and Context
+  A1. Edge computing and edge intelligence fundamentals
+  A2. LLM architecture and capability foundations
+  A3. On-device model families and SLM trends
+
+B. Deployment Challenges
+  B1. Compute-memory-bandwidth bottlenecks
+  B2. Tail-latency and serving stability
+  B3. Privacy, safety, and trust risks
+
+C. Optimization Strategies
+  C1. Data/context optimization
+  C2. Model compression and adaptation
+  C3. Runtime and serving optimization
+  C4. Edge-cloud collaborative routing
+  C5. Hardware-aware and system co-design
+
+D. Agentic Intelligence
+  D1. Tool-augmented agent loop design
+  D2. Multi-agent coordination patterns
+  D3. Small-model-first agent deployment
+
+E. Applications
+  E1. Mobility and autonomous systems
+  E2. Healthcare and privacy-sensitive deployment
+  E3. Industrial and enterprise edge intelligence
+
+F. Evaluation, Security, Governance
+  F1. Reproducible multi-metric evaluation
+  F2. Security/privacy controls and policy alignment
+  F3. Open challenges and future directions
+```
+
+## Category A: Foundations and System Context | 类别A：基础与系统背景
+
+### A1. Edge Computing and Edge Intelligence Fundamentals | 边缘计算与边缘智能基础
+
+- Shi et al. (2016), Edge Computing: Vision and Challenges, IEEE IoT Journal
+  Contribution: Early edge vision and system-level challenge framing.
+- Zhou et al. (2019), Edge Intelligence, Proceedings of the IEEE
+  Contribution: Integrates AI with edge architecture and service constraints.
+- Deng et al. (2020), Edge Intelligence Confluence Survey, IEEE IoT Journal
+  Contribution: Comprehensive survey on edge-AI integration trends.
+- Li et al. (2019), Edge AI On-demand DNN Inference, IEEE TWC
+  Contribution: Latency-aware inference acceleration via edge offloading.
+- Chen and Ran (2019), Deep Learning with Edge Computing, Proceedings of the IEEE
+  Contribution: Systematic review of edge deep learning pipelines.
+
+### A2. LLM Foundations for Edge Adaptation | 面向边缘适配的大模型基础
+
+- Vaswani et al. (2017), Attention Is All You Need
+- Brown et al. (2020), Language Models are Few-Shot Learners
+- Wei et al. (2022), Emergent Abilities of LLMs
+- Touvron et al. (2023), Llama 2 Technical Report
+- Dubey et al. (2024), The Llama 3 Herd of Models
+- Team Gemma (2024), Gemma Technical Report
+
+### A3. On-device and Small Language Model Direction | 端侧与小模型方向
+
+- Lu et al. (2024), Small Language Models Survey
+- Van Nguyen et al. (2024), Survey of Small Language Models
+- Belcak et al. (2025), Small Language Models are the Future of Agentic AI
+- Mehta et al. (2024), OpenELM
+- Abdin et al. (2024), Phi-4 Technical Report
+- Liu et al. (2024), MobileLLM
+
+## Category B: Deployment Challenges | 类别B：部署挑战
+
+### B1. Compute, Memory, and Bandwidth Pressure | 算力内存带宽压力
+
+- Gholami et al. (2022), Quantization Survey
+- Nagel et al. (2021), Neural Network Quantization White Paper
+- Xu et al. (2024), EdgeLLM Survey
+- Xiao et al. (2024), Understanding LLMs in Your Pockets
+- Yi et al. (2025), EdgeMoE for Mobile Devices
+
+### B2. Latency, Throughput, and Stability | 时延吞吐与稳定性
+
+- Kwon et al. (2023), PagedAttention
+- Sheng et al. (2023), FlexGen
+- Murthy et al. (2024), MobileAIBench
+- Laskaridis et al. (2024), Mobile and Edge Evaluation of LLMs
+- Frantar et al. (2025), Marlin Mixed-Precision Inference
+
+### B3. Security, Privacy, and Safety Risks | 安全隐私与安全性风险
+
+- Dwork and Roth (2014), Differential Privacy Foundations
+- Carlini et al. (2021), Extracting Training Data from LLMs
+- Han et al. (2024), LLM Multi-Agent Systems: Challenges
+- Andong et al. (2025), Federated Learning and Privacy Directions
+
+## Category C: Optimization Strategies | 类别C：优化策略
+
+### C1. Data and Context Optimization | 数据与上下文优化
+
+- Qin et al. (2024), On-device Personalization via Data Selection and Synthesis
+- Tirumala et al. (2023), Document De-duplication and Diversification (D4)
+- Wu et al. (2025), LiveLongBench for Long-context Understanding
+- Marone et al. (2025), mmBERT for Efficient Multilingual Retrieval
+
+### C2. Model Compression and Adaptation | 模型压缩与适配
+
+- Jacob et al. (2018), Integer-only Quantization Training
+- Hinton et al. (2015), Knowledge Distillation
+- Gou et al. (2021), Distillation Survey
+- Frantar et al. (2023), GPTQ
+- Dettmers et al. (2023), QLoRA
+- Tan et al. (2024), MobileQuant
+- Frantar and Alistarh (2023), SparseGPT
+- Han et al. (2016), Deep Compression
+
+### C3. Runtime and Serving Optimization | 运行时与服务优化
+
+- Kwon et al. (2023), PagedAttention
+- Zheng et al. (2024), SGLang
+- Dao (2024), FlashAttention-2
+- Li et al. (2024), EAGLE-2
+- Zhao et al. (2024), QSpec
+- Zhao et al. (2025), FR-Spec
+- Zhang et al. (2025), Speculative Decoding meets Quantization
+
+### C4. Edge-Cloud Collaboration and Offloading | 端边云协同与卸载
+
+- Tian et al. (2024), Edge-Cloud Collaborative Inference Survey
+- Jin et al. (2025), CoLLM
+- Yuan et al. (2025), Local-Cloud Inference Offloading
+- Dai et al. (2020), Edge Intelligence for Resource Allocation and Offloading
+
+### C5. Hardware-aware Co-design | 硬件感知协同设计
+
+- Wang et al. (2019), HAQ Hardware-aware Quantization
+- Kim et al. (2025), Slim-Llama Low-power LLM Processor
+- Yang et al. (2023), PIM-based acceleration pathways
+- Cho et al. (2021), FPGA-GPU hybrid acceleration
+- Kouris et al. (2022), Fluid batching on edge NPUs
+
+## Category D: Agentic Intelligence and Collaboration | 类别D：智能体与协同
+
+### D1. Tool-use Agent Loop | 工具调用智能体回路
+
+- Shen et al. (2023), HuggingGPT
+- Han et al. (2024), LLM Multi-agent Challenges
+- Gao et al. (2025), Self-evolving Agents Survey
+
+### D2. Multi-agent Communication and Planning | 多智能体通信与规划
+
+- Dorri et al. (2018), Multi-agent Systems Survey
+- Yan et al. (2025), Communication-centric MAS Survey
+- Belcak et al. (2025), SLM-first agentic deployment
+
+### D3. Practical Edge Agent Patterns | 边缘智能体落地模式
+
+- Planner-Executor role split
+- Tool-step budget caps
+- Cached tool outputs with freshness checks
+- Adaptive offload policy by network and battery state
+
+## Category E: Application Domains | 类别E：应用场景
+
+### E1. Mobility and Autonomous Systems | 车联网与自动系统
+
+- Edge intelligence for low-latency control and perception
+- Representative basis: Zhou 2019, Deng 2020, Xu 2024
+
+### E2. Healthcare and Privacy-sensitive AI | 医疗与隐私敏感AI
+
+- Federated adaptation and privacy-preserving local inference
+- Representative basis: Ali 2022, Dwork 2014, Andong 2025
+
+### E3. Industrial and Enterprise Edge AI | 工业与企业边缘智能
+
+- On-device assistants, quality control pipelines, multilingual retrieval, domain-specialized SLMs
+- Representative basis: OpenELM 2024, Gemma 2024, Phi-4 2024, mmBERT 2025
+
+## Category F: Evaluation, Security, and Governance | 类别F：评测安全与治理
+
+### F1. Reproducible Multi-metric Evaluation | 可复现多指标评测
+
+Minimum report set:
+
+- Task quality: accuracy, task success, reasoning fidelity
+- Serving performance: throughput, TTFT, p95/p99
+- Cost metrics: J/token, memory footprint, offload ratio
+- Stability: failure/retry rate, long-run thermal behavior
+
+### F2. Security and Governance Controls | 安全与治理控制
+
+Recommended checklist:
+
+- Prompt injection resistance and tool safety policy
+- Data leakage risk tests and privacy mechanism disclosure
+- Trust boundaries for local-edge-cloud data movement
+- Reproducibility level tag (artifact availability and protocol completeness)
+
+### F3. Key References | 关键文献
+
+- Strubell et al. (2020), Energy and Policy Considerations
+- Murthy et al. (2024), MobileAIBench
+- Laskaridis et al. (2024), Mobile and Edge Evaluation
+- Dwork and Roth (2014), Differential Privacy
+
+## Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化
+
+| Dimension | Common survey pattern | This repository |
 |---|---|---|
-| A. Foundations | Edge intelligence + LLM basics | 边缘智能基础与大模型基础 |
-| B. Deployment Challenges | Resource, latency, reliability, security constraints | 资源、时延、稳定性与安全挑战 |
-| C. Optimization Strategies | Data/model/runtime/system co-optimization | 数据、模型、运行时、系统协同优化 |
-| D. Agentic Systems | Tool-use loops, multi-agent coordination | 工具调用回路与多智能体协同 |
-| E. Applications | Mobility, healthcare, industrial and consumer scenarios | 车联网、医疗、工业与消费场景 |
-| F. Evaluation and Trust | Multi-metric evaluation, reproducibility, governance | 多指标评测、复现与治理可信 |
+| Structure | Topic list only | Full taxonomy + operational deployment map |
+| Metrics | Accuracy-centric | Multi-objective (quality, latency, energy, stability) |
+| Agent perspective | Often optional | Agent loop and multi-agent collaboration as first-class axis |
+| Edge realism | Partial | Explicit device-edge-cloud constraints and offloading trade-offs |
+| Reproducibility | Limited protocol guidance | Reporting template and governance checklist |
 
-## Detailed Taxonomy and References | 分类详情与参考文献
+## Recommended Reporting Template | 推荐报告模板
 
-### A. Foundations | 基础概念
+Use this compact template in paper notes:
 
-Scope:
-- EN: Core concepts of edge computing and LLM capability formation.
-- 中文: 边缘计算与大模型能力形成机制的基础知识。
+- Work:
+- Category tag: A/B/C/D/E/F
+- Deployment target: device / edge / cloud-hybrid
+- Model scale and precision:
+- Hardware and runtime stack:
+- Metrics reported: quality / throughput / TTFT / p95-p99 / J-token / offload ratio
+- Security and privacy controls:
+- Reproducibility level: E1 / E2 / E3
+- Practical takeaway:
 
-Representative references:
-1. Shi et al., Edge Computing: Vision and Challenges, IEEE IoTJ, 2016. https://doi.org/10.1109/JIOT.2016.2579198
-2. Zhou et al., Edge Intelligence, Proceedings of the IEEE, 2019. https://doi.org/10.1109/JPROC.2019.2918951
-3. Vaswani et al., Attention Is All You Need, NeurIPS, 2017. https://arxiv.org/abs/1706.03762
-4. Brown et al., Language Models are Few-Shot Learners, NeurIPS, 2020. https://arxiv.org/abs/2005.14165
-5. Wei et al., Emergent Abilities of LLMs, TMLR, 2022. https://arxiv.org/abs/2206.07682
+建议每篇论文按以上模板记录，便于横向对比与后续复现实验。
 
-### B. Deployment Challenges | 部署挑战
+## Citation | 引用信息
 
-Scope:
-- EN: Hard constraints in real deployment: memory bandwidth, tail latency, reliability, and safety.
-- 中文: 真实部署中的硬约束：内存带宽、尾时延、稳定性与安全。
+If this repository is useful for your research, please cite:
 
-Representative references:
-1. Gholami et al., Quantization Methods Survey, 2022. https://arxiv.org/abs/2103.13630
-2. Nagel et al., Neural Network Quantization White Paper, 2021. https://arxiv.org/abs/2106.08295
-3. Kwon et al., PagedAttention for LLM Serving, SOSP, 2023. https://doi.org/10.1145/3600006.3613165
-4. Murthy et al., MobileAIBench, 2024. https://arxiv.org/abs/2406.10290
-5. Han et al., LLM Multi-Agent Systems: Challenges and Open Problems, 2024. https://arxiv.org/abs/2402.03578
-
-### C. Optimization Strategies | 优化策略
-
-Scope:
-- EN: Budget-first co-design across data, model, runtime, and system routing.
-- 中文: 以预算为中心的数据、模型、运行时与系统协同设计。
-
-Representative references:
-1. Qin et al., On-device LLM Personalization with Data Selection and Synthesis, DAC, 2024.
-2. Jacob et al., Quantization and Training for Integer-Only Inference, CVPR, 2018. https://doi.org/10.1109/CVPR.2018.00287
-3. Frantar et al., GPTQ, ICLR, 2023. https://arxiv.org/abs/2210.17323
-4. Hinton et al., Distilling the Knowledge in a Neural Network, 2015. https://arxiv.org/abs/1503.02531
-5. Dao, FlashAttention-2, ICLR, 2024. https://arxiv.org/abs/2307.08691
-6. Li et al., EAGLE-2, EMNLP, 2024. https://aclanthology.org/2024.emnlp-main.422/
-7. Zhao et al., QSpec, 2024. https://arxiv.org/abs/2410.11305
-8. Tian et al., Edge-Cloud Collaborative Inference Survey, 2024. https://arxiv.org/abs/2407.04482
-
-### D. Agentic Systems | 智能体系统
-
-Scope:
-- EN: Agent loop control, tool invocation policies, and multi-agent collaboration at the edge.
-- 中文: 边缘侧智能体回路控制、工具调用策略与多智能体协同。
-
-Representative references:
-1. Dorri et al., Multi-agent Systems: A Survey, IEEE Access, 2018. https://doi.org/10.1109/ACCESS.2018.2831228
-2. Shen et al., HuggingGPT, 2023. https://arxiv.org/abs/2303.17580
-3. Han et al., LLM Multi-Agent Systems, 2024. https://arxiv.org/abs/2402.03578
-4. Yan et al., Communication-centric Survey of LLM-based MAS, 2025. https://arxiv.org/abs/2502.14321
-5. Belcak et al., Small Language Models are the Future of Agentic AI, 2025. https://arxiv.org/abs/2506.02153
-6. Gao et al., Survey of Self-evolving Agents, 2025. https://arxiv.org/abs/2507.21046
-
-### E. Applications | 应用场景
-
-Scope:
-- EN: Domain deployment patterns in mobility, healthcare, and industrial/consumer edge AI.
-- 中文: 车联网、医疗、工业/消费端的边缘部署模式。
-
-Representative references:
-1. Deng et al., Edge intelligence confluence survey, 2020. https://doi.org/10.1109/JIOT.2020.3007838
-2. Ali et al., Federated Learning for Smart Healthcare, IEEE JBHI, 2022.
-3. Abdin et al., Phi-4 Technical Report, 2024.
-4. Team Gemma et al., Gemma Technical Report, 2024. https://arxiv.org/abs/2403.08295
-5. Mehta et al., OpenELM, 2024.
-6. Marone et al., mmBERT, 2025. https://arxiv.org/abs/2509.06888
-
-### F. Evaluation and Trust | 评估与可信
-
-Scope:
-- EN: Reproducibility-first evaluation and governance-aware risk reporting.
-- 中文: 以可复现为优先、兼顾治理约束的风险与评估框架。
-
-Representative references:
-1. Murthy et al., MobileAIBench, 2024. https://arxiv.org/abs/2406.10290
-2. Laskaridis et al., Mobile and Edge Evaluation of LLMs, 2024.
-3. Strubell et al., Energy and Policy Considerations, AAAI, 2020. https://doi.org/10.1609/aaai.v34i09.7123
-4. Dwork and Roth, Differential Privacy Foundations, 2014. https://doi.org/10.1561/0400000042
-
-## Recommended Evaluation Metrics | 推荐评测指标
-
-To avoid single-number claims, report at least:
-
-- Task quality (accuracy, task success, reasoning fidelity)
-- Throughput (tokens/s)
-- Startup latency (TTFT)
-- Tail latency (p95/p99)
-- Energy per token (J/token)
-- Offload ratio (device vs edge/cloud)
-
-为避免单指标结论，建议至少报告：
-
-- 任务质量（准确率、任务成功率、推理保持度）
-- 吞吐（tokens/s）
-- 启动时延（TTFT）
-- 尾时延（p95/p99）
-- 单位 token 能耗（J/token）
-- 卸载比例（端侧与边/云占比）
-
-## Paper Citation | 论文引用
-
-If this repository supports your research, please cite the survey paper:
-
-如果本仓库对你的研究有帮助，请引用以下综述论文：
+如果本仓库对你的研究有帮助，请引用：
 
 ```bibtex
-@article{wang2026cognitiveedge,
-	title   = {Cognitive Edge Computing: A Survey on Optimizing Large Language Models and Autonomous Agents for the Edge},
-	author  = {Wang, Xubin and Li, Qing and Jia, Weijia},
-	journal = {Under review / manuscript repository},
-	year    = {2026},
-	note    = {Please replace with final publication venue and DOI when available}
+@article{wang2025cognitive,
+  title={Cognitive edge computing: A comprehensive survey on optimizing large models and AI agents for pervasive deployment},
+  author={Wang, Xubin and Li, Qing and Jia, Weijia},
+  journal={arXiv preprint arXiv:2501.03265},
+  year={2025}
 }
 ```
 
-## How to Maintain This README | README 维护规范
+## Maintenance Rules | 维护规范
 
-1. Add new papers under one primary category first.
-2. Keep bilingual EN/ZH descriptions synchronized.
-3. Include linkable identifiers when possible (DOI/arXiv/ACL/OpenReview).
-4. Mark unresolved metadata with a clear note instead of leaving ambiguity.
-
-1. 新文献先归入一个主分类。
-2. 保持中英文说明同步更新。
-3. 优先补全可点击标识（DOI/arXiv/ACL/OpenReview）。
-4. 元数据不确定时请明确标注，不要留含糊描述。
+1. Add each new paper to one primary category, then cross-link to secondary categories if needed.
+2. Keep EN and 中文 content synchronized.
+3. Include DOI/arXiv/ACL/OpenReview links whenever available.
+4. Avoid single-metric claims without deployment conditions.
+5. Record hardware, context length, and decoding settings for all performance statements.
 
 ## License | 许可证
 
-This project is released under the repository's LICENSE.
+Released under the repository LICENSE.
 
-本项目遵循仓库中的 LICENSE。
+遵循仓库 LICENSE。
