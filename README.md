@@ -15,11 +15,15 @@ A bilingual, high-density survey README for Cognitive Edge Computing research.
 7. [Category D: Agentic Intelligence and Collaboration | 类别D智能体与协同](#category-d-agentic-intelligence-and-collaboration--类别d智能体与协同)
 8. [Category E: Application Domains | 类别E应用场景](#category-e-application-domains--类别e应用场景)
 9. [Category F: Evaluation, Security, and Governance | 类别F评测安全与治理](#category-f-evaluation-security-and-governance--类别f评测安全与治理)
-10. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
-11. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
-12. [Citation | 引用信息](#citation--引用信息)
-13. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
-14. [License | 许可证](#license--许可证)
+10. [Curated Paper Index (Normalized Format) | 统一格式论文索引](#curated-paper-index-normalized-format--统一格式论文索引)
+11. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
+12. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
+13. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
+14. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
+15. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
+16. [Citation | 引用信息](#citation--引用信息)
+17. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
+18. [License | 许可证](#license--许可证)
 
 ## Executive Summary | 执行摘要
 
@@ -241,6 +245,91 @@ Recommended checklist:
 - Murthy et al. (2024), MobileAIBench
 - Laskaridis et al. (2024), Mobile and Edge Evaluation
 - Dwork and Roth (2014), Differential Privacy
+
+## Curated Paper Index (Normalized Format) | 统一格式论文索引
+
+Format:
+- `[ID] [BibKey] Author (Year). Title. Venue. Link. One-line contribution.`
+- 统一格式: `[编号] [BibKey] 作者(年份). 标题. 会议/期刊. 链接. 一句话贡献.`
+
+### A. Foundations
+
+- [A-01] `shi2016edge` Shi et al. (2016). Edge Computing: Vision and Challenges. IEEE IoTJ. https://doi.org/10.1109/JIOT.2016.2579198. Early edge-computing problem formulation.
+- [A-02] `zhou2019edge` Zhou et al. (2019). Edge Intelligence. Proceedings of the IEEE. https://doi.org/10.1109/JPROC.2019.2918951. Defines edge intelligence architecture and trade-offs.
+- [A-03] `deng2020edge` Deng et al. (2020). Edge Intelligence Confluence Survey. IEEE IoTJ. https://doi.org/10.1109/JIOT.2020.3007838. Consolidates edge+AI system evolution.
+- [A-04] `vaswani2017attention` Vaswani et al. (2017). Attention Is All You Need. NeurIPS. https://arxiv.org/abs/1706.03762. Transformer foundation.
+- [A-05] `brown2020language` Brown et al. (2020). Language Models are Few-Shot Learners. NeurIPS. https://arxiv.org/abs/2005.14165. In-context learning at scale.
+- [A-06] `wei2022emergent` Wei et al. (2022). Emergent Abilities of LLMs. TMLR. https://arxiv.org/abs/2206.07682. Emergence behavior under scale.
+
+### B. Challenges
+
+- [B-01] `gholami2022survey` Gholami et al. (2022). Quantization Survey. Low-power Computer Vision. https://arxiv.org/abs/2103.13630. Efficiency bottlenecks and quantization taxonomy.
+- [B-02] `nagel2021white` Nagel et al. (2021). White Paper on Neural Network Quantization. arXiv. https://arxiv.org/abs/2106.08295. Practical quantization caveats.
+- [B-03] `kwon2023efficient` Kwon et al. (2023). PagedAttention. SOSP. https://doi.org/10.1145/3600006.3613165. Memory management for serving stability.
+- [B-04] `murthy2024mobileaibench` Murthy et al. (2024). MobileAIBench. arXiv. https://arxiv.org/abs/2406.10290. On-device benchmarking baseline.
+- [B-05] `han2024llm` Han et al. (2024). LLM Multi-Agent Systems. arXiv. https://arxiv.org/abs/2402.03578. Agent risks and open problems.
+
+### C. Optimization
+
+- [C-01] `qin2024enabling` Qin et al. (2024). On-device Personalization with Data Selection/Synthesis. DAC. Data-centric personalization pipeline.
+- [C-02] `jacob2018quantization` Jacob et al. (2018). Integer-Arithmetic-Only Inference. CVPR. https://doi.org/10.1109/CVPR.2018.00287. Foundational quantization method.
+- [C-03] `frantar2023gptq` Frantar et al. (2023). GPTQ. ICLR. https://arxiv.org/abs/2210.17323. Post-training quantization for LLMs.
+- [C-04] `qlora2023` Dettmers et al. (2023). QLoRA. NeurIPS. Adapter tuning over quantized models.
+- [C-05] `tan2024mobilequant` Tan et al. (2024). MobileQuant. EMNLP Findings. Mobile-friendly quantization strategy.
+- [C-06] `dao2024flashattention` Dao (2024). FlashAttention-2. ICLR. https://arxiv.org/abs/2307.08691. Faster attention kernels.
+- [C-07] `li2024eagle` Li et al. (2024). EAGLE-2. EMNLP. https://aclanthology.org/2024.emnlp-main.422/. Dynamic draft-tree acceleration.
+- [C-08] `zhao2024qspec` Zhao et al. (2024). QSpec. arXiv. https://arxiv.org/abs/2410.11305. Quantization + speculative decoding.
+- [C-09] `tian2024edge` Tian et al. (2024). Edge-Cloud Collaborative Inference Survey. arXiv. Systematic routing and collaboration synthesis.
+
+### D. Agentic Intelligence
+
+- [D-01] `shen2023hugginggpt` Shen et al. (2023). HuggingGPT. arXiv. https://arxiv.org/abs/2303.17580. Tool-augmented agent architecture.
+- [D-02] `yan2025beyond` Yan et al. (2025). Beyond Self-Talk. arXiv. https://arxiv.org/abs/2502.14321. Communication-centric MAS analysis.
+- [D-03] `belcak2025small` Belcak et al. (2025). SLMs are the Future of Agentic AI. arXiv. https://arxiv.org/abs/2506.02153. Small-model-first agent argument.
+- [D-04] `gao2025survey` Gao et al. (2025). Self-evolving Agents Survey. arXiv. https://arxiv.org/abs/2507.21046. Evolutionary agent mechanisms.
+
+### E/F. Applications, Evaluation, Security
+
+- [E-01] `abdin2024phi` Abdin et al. (2024). Phi-4 Technical Report. arXiv. Compact high-capability model family.
+- [E-02] `team2024gemma` Team Gemma (2024). Gemma Technical Report. arXiv. https://arxiv.org/abs/2403.08295. Open model stack for practical deployment.
+- [E-03] `mehtaopenelm` Mehta et al. (2024). OpenELM. ICML Workshop. Efficient open model design.
+- [E-04] `marone2025mmbert` Marone et al. (2025). mmBERT. arXiv. https://arxiv.org/abs/2509.06888. Efficient multilingual encoder for retrieval.
+- [F-01] `strubell2020energy` Strubell et al. (2020). Energy and Policy Considerations. AAAI. https://doi.org/10.1609/aaai.v34i09.7123. Energy-aware reporting perspective.
+- [F-02] `dwork2014algorithmic` Dwork and Roth (2014). Differential Privacy Foundations. FnT TCS. https://doi.org/10.1561/0400000042. Formal privacy baseline.
+
+## Timeline by Year | 按年份时间线
+
+| Year | Milestone Papers | Why It Matters |
+|---|---|---|
+| 2014-2017 | `dwork2014algorithmic`, `vaswani2017attention` | Privacy foundations + Transformer paradigm |
+| 2018-2020 | `jacob2018quantization`, `zhou2019edge`, `brown2020language` | Efficient inference + edge intelligence + few-shot LLM shift |
+| 2021-2022 | `nagel2021white`, `wei2022emergent`, `gholami2022survey` | Quantization practices + capability emergence + efficiency synthesis |
+| 2023 | `kwon2023efficient`, `frantar2023gptq`, `shen2023hugginggpt` | Serving memory breakthroughs + PTQ for LLM + tool-using agents |
+| 2024 | `murthy2024mobileaibench`, `tan2024mobilequant`, `li2024eagle`, `team2024gemma` | On-device benchmarks + mobile quantization + decode acceleration + open deployable models |
+| 2025 | `belcak2025small`, `gao2025survey`, `marone2025mmbert` | SLM-first agent direction + self-evolving agents + multilingual retrieval efficiency |
+
+## Task-Oriented Retrieval Matrix | 按任务维度检索矩阵
+
+| Task/Problem | Recommended Entry Papers | Category |
+|---|---|---|
+| Edge AI fundamentals | `shi2016edge`, `zhou2019edge`, `deng2020edge` | A |
+| LLM capability baseline | `vaswani2017attention`, `brown2020language`, `wei2022emergent` | A |
+| On-device benchmarking | `murthy2024mobileaibench`, `laskaridismobile`, `xiao2024understanding` | B/F |
+| Quantization for deployment | `jacob2018quantization`, `frantar2023gptq`, `tan2024mobilequant`, `qlora2023` | C |
+| Serving/runtime optimization | `kwon2023efficient`, `dao2024flashattention`, `li2024eagle`, `zhao2024qspec` | C |
+| Edge-cloud offloading | `tian2024edge`, `jin2025collm`, `yuan2025local` | C |
+| Agent tool-use and control | `shen2023hugginggpt`, `han2024llm`, `gao2025survey` | D |
+| SLM for agentic deployment | `belcak2025small`, `lu2024small`, `van2024survey` | A/D |
+| Privacy and governance | `dwork2014algorithmic`, `carlini2021extracting`, `han2024llm` | B/F |
+
+## Journal/Conference Target Mapping | 投稿方向映射
+
+| Research Emphasis | Suggested Targets |
+|---|---|
+| Data/knowledge management, retrieval pipelines, reproducible protocol synthesis | TKDE, TOIS, ACM CSUR |
+| Edge systems architecture, offloading, serving orchestration | IEEE TMC, IEEE IoTJ, IEEE TPDS |
+| Efficient model compression and deployment algorithms | TNNLS, ML Systems workshops, ICML/NeurIPS systems tracks |
+| Agent safety, tool governance, and applied trustworthy deployment | IEEE TAI, AI ethics/governance tracks, domain-focused venues |
 
 ## Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化
 
