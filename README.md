@@ -18,14 +18,15 @@ A bilingual, high-density survey README for Cognitive Edge Computing research.
 10. [Curated Paper Index (Normalized Format) | 统一格式论文索引](#curated-paper-index-normalized-format--统一格式论文索引)
 11. [Extended Coverage: Additional 52 Manuscript References | 扩展覆盖：来自主稿的 52 条补充文献](#extended-coverage-additional-52-manuscript-references--扩展覆盖来自主稿的-52-条补充文献)
 12. [New Literature Batch-II (2024-2025): 30 Additional Papers | 新文献批次II（2024-2025）：新增30篇](#new-literature-batch-ii-2024-2025-30-additional-papers--新文献批次ii2024-2025新增30篇)
-13. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
-14. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
-15. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
-16. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
-17. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
-18. [Citation | 引用信息](#citation--引用信息)
-19. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
-20. [License | 许可证](#license--许可证)
+13. [New Literature Batch-III (Curated, Edge-First): 27 Additional Papers | 新文献批次III（精选，边缘优先）：新增27篇](#new-literature-batch-iii-curated-edge-first-27-additional-papers--新文献批次iii精选边缘优先新增27篇)
+14. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
+15. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
+16. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
+17. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
+18. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
+19. [Citation | 引用信息](#citation--引用信息)
+20. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
+21. [License | 许可证](#license--许可证)
 
 ## Executive Summary | 执行摘要
 
@@ -394,6 +395,38 @@ This section expands coverage using bibkey-verified entries from the manuscript 
 | N-28 | `sakib2025small` | 2025 | Small Language Models: Architectures, Techniques, Evaluation, Problems and Future Adaptation | arXiv preprint arXiv:2505.19529 |
 | N-29 | `seo2025facil` | 2025 | FACIL: Flexible DRAM Address Mapping for SoC-PIM Cooperative On-device LLM Inference | 2025 IEEE International Symposium on High Performance Computer Architecture (HPCA) |
 | N-30 | `sun2025disco` | 2025 | DiSCo: Device-Server Collaborative LLM-Based Text Streaming Services | arXiv preprint arXiv:2502.11417 |
+
+## New Literature Batch-III (Curated, Edge-First): 27 Additional Papers | 新文献批次III（精选，边缘优先）：新增27篇
+
+| ID | BibKey | Year | Title | Venue |
+|---|---|---|---|---|
+| M-01 | `cheng2024autoiot` | 2024 | Autoiot: Automated iot platform using large language models | IEEE Internet of Things Journal |
+| M-02 | `xue2024powerinfer` | 2024 | Powerinfer-2: Fast large language model inference on a smartphone | arXiv preprint arXiv:2406.06282 |
+| M-03 | `xu2024edgellm` | 2024 | Edgellm: Fast on-device llm inference with speculative decoding | IEEE Transactions on Mobile Computing |
+| M-04 | `li2024federated` | 2024 | Federated black-box prompt tuning system for large language models on the edge | Proceedings of the 30th Annual International Conference on Mobile Computing and Networking |
+| M-05 | `cai2024self` | 2024 | Self-adapting large visual-language models to edge devices across visual modalities | European Conference on Computer Vision |
+| M-06 | `ma2024one` | 2024 | From one thousand pages of specification to unveiling hidden bugs: Large language model assisted fuzzing of matter $\{IoT\}$ devices | 33rd USENIX Security Symposium (USENIX Security 24) |
+| M-07 | `oliinyk2024fuzzing` | 2024 | Fuzzing $\{BusyBox\}$: Leveraging $\{LLM\}$ and Crash Reuse for Embedded Bug Unearthing | 33rd USENIX Security Symposium (USENIX Security 24) |
+| M-08 | `wei2025t` | 2025 | T-mac: Cpu renaissance via table lookup for low-bit llm deployment on edge | Proceedings of the Twentieth European Conference on Computer Systems |
+| M-09 | `kong2024swapmoe` | 2024 | SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget | Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) |
+| M-10 | `chen2024understanding` | 2024 | Understanding the potential of fpga-based spatial acceleration for large language model inference | ACM Transactions on Reconfigurable Technology and Systems |
+| M-11 | `hu2024realizing` | 2024 | Realizing Efficient On-Device Language-Based Image Retrieval | ACM Transactions on Multimedia Computing, Communications and Applications |
+| M-12 | `xu2024towards` | 2024 | Towards energy-efficient llama2 architecture on embedded fpgas | Proceedings of the 33rd ACM International Conference on Information and Knowledge Management |
+| M-13 | `zhang2024edgeshard` | 2024 | Edgeshard: Efficient llm inference via collaborative edge computing | IEEE Internet of Things Journal |
+| M-14 | `xu2025fast` | 2025 | Fast on-device LLM inference with npus | Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1 |
+| M-15 | `yu2024cambricon` | 2024 | Cambricon-llm: A chiplet-based hybrid architecture for on-device inference of 70b llm | 2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO) |
+| M-16 | `ren2024industrial` | 2024 | Industrial internet of things with large language models (LLMs): an intelligence-based reinforcement learning approach | IEEE Transactions on Mobile Computing |
+| M-17 | `zhang2025vavlm` | 2025 | VaVLM: Toward Efficient Edge-Cloud Video Analytics With Vision-Language Models | IEEE Transactions on Broadcasting |
+| M-18 | `rivkin2024aiot` | 2024 | Aiot smart home via autonomous llm agents | IEEE Internet of Things Journal |
+| M-19 | `yang2025quality` | 2025 | Quality-of-Service Aware LLM Routing for Edge Computing with Multiple Experts | IEEE Transactions on Mobile Computing |
+| M-20 | `chen2024autoos` | 2024 | Autoos: make your os more powerful by exploiting large language models | Forty-first International Conference on Machine Learning |
+| M-21 | `cai2025prompt` | 2025 | Prompt-Ladder: Memory-efficient prompt tuning for vision-language models on edge devices | Pattern Recognition |
+| M-22 | `minicpm-v4` | 2024 | MiniCPM-V: A GPT-4V Level MLLM on Your Phone | arXiv preprint arXiv:2408.01800 |
+| M-23 | `sun2025lincoln` | 2025 | Lincoln: Real-Time 50\~{} 100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory | 2025 IEEE International Symposium on High Performance Computer Architecture (HPCA) |
+| M-24 | `tian2025clone` | 2025 | CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge | arXiv preprint arXiv:2506.02847 |
+| M-25 | `wang2025empowering` | 2025 | Empowering edge intelligence: A comprehensive survey on on-device ai models | ACM Computing Surveys |
+| M-26 | `zhao2025mobilellm` | 2025 | MobileLLM-R1: Exploring the Limits of Sub-Billion Language Model Reasoners with Open Training Recipes | arXiv preprint arXiv:2509.24945 |
+| M-27 | `yang2025mobileviclip` | 2025 | MobileViCLIP: An Efficient Video-Text Model for Mobile Devices | arXiv preprint arXiv:2508.07312 |
 
 ## Timeline by Year | 按年份时间线
 
