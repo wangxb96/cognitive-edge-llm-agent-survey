@@ -17,14 +17,15 @@ A bilingual, high-density survey README for Cognitive Edge Computing research.
 9. [Category F: Evaluation, Security, and Governance | 类别F评测安全与治理](#category-f-evaluation-security-and-governance--类别f评测安全与治理)
 10. [Curated Paper Index (Normalized Format) | 统一格式论文索引](#curated-paper-index-normalized-format--统一格式论文索引)
 11. [Extended Coverage: Additional 52 Manuscript References | 扩展覆盖：来自主稿的 52 条补充文献](#extended-coverage-additional-52-manuscript-references--扩展覆盖来自主稿的-52-条补充文献)
-12. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
-13. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
-14. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
-15. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
-16. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
-17. [Citation | 引用信息](#citation--引用信息)
-18. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
-19. [License | 许可证](#license--许可证)
+12. [New Literature Batch-II (2024-2025): 30 Additional Papers | 新文献批次II（2024-2025）：新增30篇](#new-literature-batch-ii-2024-2025-30-additional-papers--新文献批次ii2024-2025新增30篇)
+13. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
+14. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
+15. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
+16. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
+17. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
+18. [Citation | 引用信息](#citation--引用信息)
+19. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
+20. [License | 许可证](#license--许可证)
 
 ## Executive Summary | 执行摘要
 
@@ -358,6 +359,41 @@ This section expands coverage using bibkey-verified entries from the manuscript 
 | X-50 | Applications & Benchmarks | `strubell2020energy` | 2020 | Energy and policy considerations for modern deep learning research | Proceedings of the AAAI conference on artificial intelligence |
 | X-51 | Runtime & Serving | `yuan2025local` | 2025 | Local-Cloud Inference Offloading for LLMs in Multi-Modal, Multi-Task, Multi-Dialogue Settings | arXiv preprint arXiv:2502.11007 |
 | X-52 | Collaboration & Deployment | `tian2024edge` | 2024 | An edge-cloud collaboration framework for generative ai service provision with synergetic big cloud model and small edge models | IEEE Network |
+
+## New Literature Batch-II (2024-2025): 30 Additional Papers | 新文献批次II（2024-2025）：新增30篇
+
+| ID | BibKey | Year | Title | Venue |
+|---|---|---|---|---|
+| N-01 | `amp4ec` | 2025 | AMP4EC: Adaptive Model Partitioning Framework for Efficient Deep Learning Inference in Edge Computing Environments | arXiv preprint arXiv:2504.00407 |
+| N-02 | `andong2025federated` | 2025 | Federated Multi-Agent Reinforcement Learning for Privacy-Preserving and Energy-Aware Resource Management in 6G Edge Networks | arXiv preprint arXiv:2509.10163 |
+| N-03 | `bohdal2025efficient` | 2025 | Efficient Compositional Multi-tasking for On-device Large Language Models | arXiv preprint arXiv:2507.16083 |
+| N-04 | `chen2025inference` | 2025 | Inference performance evaluation for LLMs on edge devices with a novel benchmarking framework and metric | arXiv preprint arXiv:2508.11269 |
+| N-05 | `chiu2025v2v` | 2025 | V2v-llm: Vehicle-to-vehicle cooperative autonomous driving with multi-modal large language models | arXiv preprint arXiv:2502.09980 |
+| N-06 | `faghri2025mobileclip2` | 2025 | MobileCLIP2: Improving Multi-Modal Reinforced Training | arXiv preprint arXiv:2508.20691 |
+| N-07 | `fan2025parallel` | 2025 | Parallel CPU-GPU Execution for LLM Inference on Constrained GPUs | arXiv preprint arXiv:2506.03296 |
+| N-08 | `fang2025federated` | 2025 | Federated sketching lora: On-device collaborative fine-tuning of large language models | arXiv preprint arXiv:2501.19389 |
+| N-09 | `frantar2025marlin` | 2025 | Marlin: Mixed-precision auto-regressive parallel inference on large language models | Proceedings of the 30th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming |
+| N-10 | `guo2025deepseek` | 2025 | DeepSeek-R1 incentivizes reasoning in LLMs through reinforcement learning | Nature |
+| N-11 | `hu2025llm` | 2025 | Llm-based misbehavior detection architecture for enhanced traffic safety in connected autonomous vehicles | IEEE Transactions on Vehicular Technology |
+| N-12 | `huang2025vinci` | 2025 | Vinci: A Real-time Smart Assistant Based on Egocentric Vision-language Model for Portable Devices | Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies |
+| N-13 | `jin2025innovative` | 2025 | An Innovative Brain-Computer Interface Interaction System Based on the Large Language Model | arXiv preprint arXiv:2502.11659 |
+| N-14 | `joshi2025neuro` | 2025 | Neuro-LIFT: A neuromorphic, LLM-based interactive framework for autonomous drone flight at the edge | arXiv preprint arXiv:2501.19259 |
+| N-15 | `kong2025quantum` | 2025 | Quantum-enhanced llm efficient fine tuning | arXiv preprint arXiv:2503.12790 |
+| N-16 | `lee2025paise` | 2025 | PAISE: PIM-Accelerated Inference Scheduling Engine for Transformer-based LLM | 2025 IEEE International Symposium on High Performance Computer Architecture (HPCA) |
+| N-17 | `li2025cusmer` | 2025 | CuSMer: Multimodal Intent Recognition in Customer Service via Data Augment and LLM Merge | Companion Proceedings of the ACM on Web Conference 2025 |
+| N-18 | `li2025next` | 2025 | What Is Next for LLMs? Next-Generation AI Computing Hardware Using Photonic Chips | arXiv preprint arXiv:2505.05794 |
+| N-19 | `li2025pushing` | 2025 | Pushing up to the limit of memory bandwidth and capacity utilization for efficient llm decoding on embedded fpga | 2025 Design, Automation \& Test in Europe Conference (DATE) |
+| N-20 | `li2025qpart` | 2025 | QPART: Adaptive Model Quantization and Dynamic Workload Balancing for Accuracy-aware Edge Inference | arXiv preprint arXiv:2506.23934 |
+| N-21 | `li2025urban` | 2025 | Urban Computing in the Era of Large Language Models | ACM Transactions on Intelligent Systems and Technology |
+| N-22 | `liu2025ops` | 2025 | OPS: Outlier-Aware Precision-Slice Framework for LLM Acceleration | 2025 Design, Automation \& Test in Europe Conference (DATE) |
+| N-23 | `lu2025bluelm` | 2025 | Bluelm-v-3b: Algorithm and system co-design for multimodal large language models on mobile devices | Proceedings of the Computer Vision and Pattern Recognition Conference |
+| N-24 | `mao2025deepwriter` | 2025 | DeepWriter: A Fact-Grounded Multimodal Writing Assistant Based On Offline Knowledge Base | arXiv preprint arXiv:2507.14189 |
+| N-25 | `pan2025instattention` | 2025 | InstAttention: In-Storage Attention Offloading for Cost-Effective Long-Context LLM Inference | 2025 IEEE International Symposium on High Performance Computer Architecture (HPCA) |
+| N-26 | `qu2025mobile` | 2025 | Mobile edge intelligence for large language models: A contemporary survey | IEEE Communications Surveys \& Tutorials |
+| N-27 | `ravichandran2025distilling` | 2025 | Distilling On-device Language Models for Robot Planning with Minimal Human Intervention | arXiv preprint arXiv:2506.17486 |
+| N-28 | `sakib2025small` | 2025 | Small Language Models: Architectures, Techniques, Evaluation, Problems and Future Adaptation | arXiv preprint arXiv:2505.19529 |
+| N-29 | `seo2025facil` | 2025 | FACIL: Flexible DRAM Address Mapping for SoC-PIM Cooperative On-device LLM Inference | 2025 IEEE International Symposium on High Performance Computer Architecture (HPCA) |
+| N-30 | `sun2025disco` | 2025 | DiSCo: Device-Server Collaborative LLM-Based Text Streaming Services | arXiv preprint arXiv:2502.11417 |
 
 ## Timeline by Year | 按年份时间线
 
