@@ -1,8 +1,8 @@
-# Cognitive Edge Computing Survey: LLMs and AI Agents for Device-Edge-Cloud Deployment
+# Cognitive Edge Computing Survey: LLMs and AI Agents for Edge Deployment
 
 A concise, professional survey map for deploying large models and AI agents under real edge constraints.
 
-认知边缘计算综述导航：聚焦大模型与智能体在端-边-云场景中的可部署优化。
+认知边缘计算综述导航：聚焦大模型与智能体在边缘场景中的可部署优化。
 
 ## Table of Contents | 目录
 
@@ -21,17 +21,17 @@ A concise, professional survey map for deploying large models and AI agents unde
 ### EN
 
 This repository organizes the literature of Cognitive Edge Computing for LLMs and AI Agents into a practical taxonomy.
-The focus is deployment realism: reasoning quality, latency stability, energy efficiency, and security/privacy under device-edge-cloud constraints.
+The focus is deployment realism at the edge: reasoning quality, latency stability, energy efficiency, and security/privacy under resource-constrained environments.
 
 ### 中文
 
 本仓库将认知边缘计算相关文献按可部署视角进行结构化整理。
-重点不是单一指标提升，而是在端-边-云约束下同时兼顾推理质量、时延稳定、能耗效率与安全隐私。
+重点不是单一指标提升，而是在边缘资源约束下同时兼顾推理质量、时延稳定、能耗效率与安全隐私。
 
 ## Scope | 范围
 
 - Models: LLM, SLM, multimodal language models, MoE variants
-- Systems: on-device inference, edge serving, edge-cloud collaboration, agent tool-use loops
+- Systems: on-device inference, edge serving, optional cloud collaboration, agent tool-use loops
 - Objectives: quality-preserving optimization, efficient serving, trustworthy deployment
 
 ## Taxonomy | 分类框架
@@ -141,7 +141,7 @@ Recommended minimum report for each study:
 - Quality: accuracy/task success/reasoning fidelity
 - Performance: throughput, TTFT, p95/p99 latency
 - Efficiency: memory footprint, energy per token
-- Deployment: on-device ratio, edge/cloud offload ratio
+- Deployment: on-device ratio, optional offload ratio (when cloud collaboration is enabled)
 - Reliability: long-run stability, retry/failure rate
 - Trust: privacy/security mechanism and threat assumptions
 
