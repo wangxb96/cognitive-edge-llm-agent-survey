@@ -57,6 +57,21 @@ Figure note:
 | E. Applications | mobility, healthcare, industrial edge AI | 车联网、医疗、工业边缘应用 |
 | F. Evaluation & Trust | reproducibility, metrics, governance | 可复现评测与可信治理 |
 
+```mermaid
+flowchart TD
+  A[Foundations<br/>边缘智能与大模型基础] --> B[Deployment Challenges<br/>资源 时延 安全 瓶颈]
+  B --> C[Optimization Strategies<br/>数据 模型 运行时 系统协同]
+  C --> D[Agentic Intelligence<br/>规划 工具调用 多智能体]
+  C --> E[Applications<br/>车联网 医疗 工业边缘]
+  D --> E
+  E --> F[Evaluation and Trust<br/>质量 时延 能耗 可信治理]
+  F --> C
+```
+
+Diagram note:
+- EN: This condensed framework follows the paper's logic: challenges drive optimization, optimization enables agentic and domain deployment, and evaluation closes the loop.
+- 中文：这个简化框架遵循论文主线：挑战驱动优化，优化支撑智能体与应用落地，评测再反向约束设计。
+
 ## Key Literature by Category | 分类别核心文献
 
 ### A. Foundations
@@ -174,15 +189,6 @@ Recommended minimum report for each study:
 - Deployment: on-device ratio, optional offload ratio (when cloud collaboration is enabled)
 - Reliability: long-run stability, retry/failure rate
 - Trust: privacy/security mechanism and threat assumptions
-
-## Suggested Venue Mapping | 投稿方向建议
-
-| Research emphasis | Suggested venues |
-|---|---|
-| Data/knowledge management + reproducible protocol synthesis | TKDE, TOIS, ACM CSUR |
-| Edge systems and serving architecture | IEEE TMC, IEEE IoTJ, IEEE TPDS |
-| Efficient inference/compression methods | TNNLS, MLSys tracks, ICML/NeurIPS systems |
-| Trustworthy and secure agent deployment | IEEE TAI, security/system venues |
 
 ## Citation | 引用信息
 
