@@ -114,7 +114,7 @@ Direct links are added where a stable publisher page or arXiv record is availabl
 - Jeon et al., [A Frustratingly Easy Post-Training Quantization Scheme for LLMs](https://doi.org/10.18653/v1/2023.emnlp-main.892), EMNLP, 2023. Provides a strong lightweight PTQ baseline for practical comparisons.
 - Lin et al., [AWQ: Activation-aware Weight Quantization for On-device LLM Compression and Acceleration](https://arxiv.org/abs/2306.00978), ML Systems, 2024. Uses activation-aware quantization to improve the quality-efficiency balance relevant to deployment.
 - Dao, [FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning](https://arxiv.org/abs/2307.08691), ICLR, 2024. Represents kernel-level acceleration for attention-dominated inference paths.
-- Li et al., EAGLE-2, EMNLP, 2024. Illustrates decoding-side acceleration where the latency gains come from generation strategy, not only from compression.
+- Li et al., [EAGLE-2: Faster Inference of Language Models with Dynamic Draft Trees](https://doi.org/10.18653/v1/2024.emnlp-main.422), EMNLP, 2024. Illustrates decoding-side acceleration where the latency gains come from generation strategy, not only from compression.
 - Zhao et al., [QSpec: Speculative Decoding with Complementary Quantization Schemes](https://arxiv.org/abs/2410.11305), 2024. Highlights the interaction between speculative decoding and quantized execution.
 - Tian et al., [An Edge-Cloud Collaboration Framework for Generative AI Service Provision with Synergetic Big Cloud Model and Small Edge Models](https://doi.org/10.1109/mnet.2024.3420755), IEEE Network, 2024. Summarizes how selective cloud assistance can be integrated when pure local execution is insufficient.
 - Zhang et al., [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](https://doi.org/10.1109/jiot.2024.3524255), IEEE IoTJ, 2024. Gives a concrete systems example of collaborative inference across edge resources.
@@ -146,11 +146,15 @@ Direct links are added where a stable publisher page or arXiv record is availabl
 - Dwork and Roth, [The Algorithmic Foundations of Differential Privacy](https://doi.org/10.1561/0400000042), 2014. Remains the core privacy baseline for sensitive edge workloads.
 - Laskaridis et al., [Mobile and Edge Evaluation of Large Language Models](https://doi.org/10.36227/techrxiv.172115025.57884352/v1), 2024. Helps define realistic benchmarking methodology for edge-oriented model comparison.
 - Murthy et al., [MobileAIBench: Benchmarking LLMs/LMMs for On-Device Use Cases](https://arxiv.org/abs/2406.10290), 2024. Supports cross-model evaluation on tasks and devices closer to actual deployment practice.
-- Oliinyk et al., Fuzzing BusyBox with LLM support, USENIX Security, 2024. Shows that LLM-assisted security tooling is now relevant to embedded software stacks.
-- Ma et al., LLM-assisted fuzzing of IoT device stacks, USENIX Security, 2024. Connects model-assisted reasoning with concrete IoT vulnerability discovery workflows.
+- Oliinyk et al., [Fuzzing BusyBox: Leveraging LLM and Crash Reuse for Embedded Bug Unearthing](https://www.usenix.org/conference/usenixsecurity24/presentation/asmita), USENIX Security, 2024. Shows that LLM-assisted security tooling is now relevant to embedded software stacks.
+- Ma et al., [From One Thousand Pages of Specification to Unveiling Hidden Bugs: Large Language Model Assisted Fuzzing of Matter IoT Devices](https://www.usenix.org/conference/usenixsecurity24/presentation/ma-xiaoyue), USENIX Security, 2024. Connects model-assisted reasoning with concrete IoT vulnerability discovery workflows.
 - Gilbert et al., [Large Language Model AI Chatbots Require Approval as Medical Devices](https://doi.org/10.1038/s41591-023-02412-6), Nature Medicine, 2023. Highlights the governance and regulatory implications of deploying language systems in sensitive domains.
 
 ## Recent Highlights (2024-2025) | 近两年重点文献
+
+Tag legend: `[System]` serving/runtime, `[Routing]` collaboration/policy, `[Hardware]` accelerator/memory mapping, `[Application]` domain deployment.
+
+标签说明：`[System]` 表示服务与运行时，`[Routing]` 表示协同与路由策略，`[Hardware]` 表示硬件/内存映射优化，`[Application]` 表示场景化落地。
 
 ### Systems and Serving
 
@@ -158,12 +162,12 @@ This line of work pushes edge deployment from proof-of-concept execution toward 
 
 这一方向的研究正把边缘部署从“能跑起来”推进到“可稳定服务”，重点同时优化启动开销、生成时延、显存占用与硬件利用率。
 
-- [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](https://arxiv.org/abs/2406.06282). arXiv, 2024. A strong reference for phone-class large-model execution.
-- [EdgeLLM: Fast On-Device LLM Inference with Speculative Decoding](https://doi.org/10.1109/tmc.2024.3513457). IEEE Transactions on Mobile Computing, 2024. Shows how decoding policy directly changes on-device latency.
-- [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](https://doi.org/10.18653/v1/2024.acl-long.363). ACL, 2024. Highlights memory-budget-aware serving for sparse expert models.
-- [Fast On-Device LLM Inference with NPUs](https://doi.org/10.1145/3669940.3707239). ASPLOS, 2025. Demonstrates the growing importance of mobile accelerator backends.
-- [Lincoln: Real-Time 50-100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory](https://doi.org/10.1109/hpca61900.2025.00128). HPCA, 2025. Pushes very large-model inference closer to consumer-device feasibility.
-- [Marlin: Mixed-precision Auto-regressive Parallel Inference on Large Language Models](https://doi.org/10.1145/3710848.3710871). PPoPP, 2025. Optimizes high-throughput serving through mixed-precision generation.
+- [System] [PowerInfer-2: Fast Large Language Model Inference on a Smartphone](https://arxiv.org/abs/2406.06282). arXiv, 2024. A strong reference for phone-class large-model execution.
+- [System] [EdgeLLM: Fast On-Device LLM Inference with Speculative Decoding](https://doi.org/10.1109/tmc.2024.3513457). IEEE Transactions on Mobile Computing, 2024. Shows how decoding policy directly changes on-device latency.
+- [System] [SwapMoE: Serving Off-the-shelf MoE-based Large Language Models with Tunable Memory Budget](https://doi.org/10.18653/v1/2024.acl-long.363). ACL, 2024. Highlights memory-budget-aware serving for sparse expert models.
+- [Hardware] [Fast On-Device LLM Inference with NPUs](https://doi.org/10.1145/3669940.3707239). ASPLOS, 2025. Demonstrates the growing importance of mobile accelerator backends.
+- [Hardware] [Lincoln: Real-Time 50-100B LLM Inference on Consumer Devices with LPDDR-Interfaced, Compute-Enabled Flash Memory](https://doi.org/10.1109/hpca61900.2025.00128). HPCA, 2025. Pushes very large-model inference closer to consumer-device feasibility.
+- [System] [Marlin: Mixed-precision Auto-regressive Parallel Inference on Large Language Models](https://doi.org/10.1145/3710848.3710871). PPoPP, 2025. Optimizes high-throughput serving through mixed-precision generation.
 
 ### Collaboration and Routing
 
@@ -171,11 +175,11 @@ Recent collaboration work treats routing as a first-class control problem: decid
 
 近期协同研究把路由本身视为一类核心控制问题，即在时延与质量约束下，决定何时本地执行、何时边缘分片、何时升级到更强的远端模型。
 
-- [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](https://doi.org/10.1109/jiot.2024.3524255). IEEE Internet of Things Journal, 2024. Frames collaboration as a systems-level response to memory and load limits.
-- [Quality-of-Service Aware LLM Routing for Edge Computing with Multiple Experts](https://doi.org/10.1109/tmc.2025.3590969). IEEE Transactions on Mobile Computing, 2025. Treats routing as an explicit service-quality optimization problem.
-- [CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge](https://arxiv.org/abs/2506.02847). arXiv, 2025. Connects edge adaptation with latency-aware customization.
-- [DiSCo: Device-Server Collaborative LLM-Based Text Streaming Services](https://arxiv.org/abs/2502.11417). arXiv, 2025. Provides a concrete collaborative service architecture for streaming outputs.
-- [Federated Black-box Prompt Tuning System for Large Language Models on the Edge](https://doi.org/10.1145/3636534.3698856). MobiCom, 2024. Shows how collaboration can happen without centralizing raw private data.
+- [Routing] [EdgeShard: Efficient LLM Inference via Collaborative Edge Computing](https://doi.org/10.1109/jiot.2024.3524255). IEEE Internet of Things Journal, 2024. Frames collaboration as a systems-level response to memory and load limits.
+- [Routing] [Quality-of-Service Aware LLM Routing for Edge Computing with Multiple Experts](https://doi.org/10.1109/tmc.2025.3590969). IEEE Transactions on Mobile Computing, 2025. Treats routing as an explicit service-quality optimization problem.
+- [Routing] [CLONE: Customizing LLMs for Efficient Latency-Aware Inference at the Edge](https://arxiv.org/abs/2506.02847). arXiv, 2025. Connects edge adaptation with latency-aware customization.
+- [Routing] [DiSCo: Device-Server Collaborative LLM-Based Text Streaming Services](https://arxiv.org/abs/2502.11417). arXiv, 2025. Provides a concrete collaborative service architecture for streaming outputs.
+- [Routing] [Federated Black-box Prompt Tuning System for Large Language Models on the Edge](https://doi.org/10.1145/3636534.3698856). MobiCom, 2024. Shows how collaboration can happen without centralizing raw private data.
 
 ### Hardware-Aware Acceleration
 
@@ -183,11 +187,11 @@ Hardware-aware studies make it clear that edge LLM progress is not only algorith
 
 硬件感知方向说明，边缘大模型进展并不只是算法改进，部署效果越来越取决于模型如何映射到 NPU、PIM、FPGA 与低比特 CPU 后端。
 
-- [Cambricon-LLM: A Chiplet-based Hybrid Architecture for On-Device Inference of 70B LLM](https://doi.org/10.1109/micro61859.2024.00108). MICRO, 2024. Explores hardware architecture support for very large on-device models.
-- [PAISE: PIM-Accelerated Inference Scheduling Engine for Transformer-based LLM](https://doi.org/10.1109/hpca61900.2025.00126). HPCA, 2025. Pushes scheduling intelligence into the memory-centric acceleration path.
-- [FACIL: Flexible DRAM Address Mapping for SoC-PIM Cooperative On-device LLM Inference](https://doi.org/10.1109/hpca61900.2025.00127). HPCA, 2025. Focuses on memory mapping and SoC-PIM cooperation.
-- [T-MAC: CPU Renaissance via Table Lookup for Low-bit LLM Deployment on Edge](https://doi.org/10.1145/3689031.3696099). EuroSys, 2025. Reopens the low-bit CPU deployment path for edge inference.
-- [Understanding the Potential of FPGA-based Spatial Acceleration for Large Language Model Inference](https://doi.org/10.1145/3656177). ACM TRETS, 2024, and [Pushing up to the Limit of Memory Bandwidth and Capacity Utilization for Efficient LLM Decoding on Embedded FPGA](https://doi.org/10.23919/date64628.2025.10993087). DATE, 2025. Together they frame FPGA deployment as a specialized but increasingly relevant embedded path.
+- [Hardware] [Cambricon-LLM: A Chiplet-based Hybrid Architecture for On-Device Inference of 70B LLM](https://doi.org/10.1109/micro61859.2024.00108). MICRO, 2024. Explores hardware architecture support for very large on-device models.
+- [Hardware] [PAISE: PIM-Accelerated Inference Scheduling Engine for Transformer-based LLM](https://doi.org/10.1109/hpca61900.2025.00126). HPCA, 2025. Pushes scheduling intelligence into the memory-centric acceleration path.
+- [Hardware] [FACIL: Flexible DRAM Address Mapping for SoC-PIM Cooperative On-device LLM Inference](https://doi.org/10.1109/hpca61900.2025.00127). HPCA, 2025. Focuses on memory mapping and SoC-PIM cooperation.
+- [Hardware] [T-MAC: CPU Renaissance via Table Lookup for Low-bit LLM Deployment on Edge](https://doi.org/10.1145/3689031.3696099). EuroSys, 2025. Reopens the low-bit CPU deployment path for edge inference.
+- [Hardware] [Understanding the Potential of FPGA-based Spatial Acceleration for Large Language Model Inference](https://doi.org/10.1145/3656177). ACM TRETS, 2024, and [Pushing up to the Limit of Memory Bandwidth and Capacity Utilization for Efficient LLM Decoding on Embedded FPGA](https://doi.org/10.23919/date64628.2025.10993087). DATE, 2025. Together they frame FPGA deployment as a specialized but increasingly relevant embedded path.
 
 ### Multimodal and Domain Deployment
 
@@ -195,13 +199,13 @@ The most visible application trend is that edge intelligence is moving beyond te
 
 最明显的应用趋势是，边缘智能正在从纯文本助手扩展到多模态感知、智能家居协同、工业控制与协同交通等场景。
 
-- [Self-adapting Large Visual-Language Models to Edge Devices Across Visual Modalities](https://doi.org/10.1007/978-3-031-73390-1_18). ECCV, 2024. Demonstrates modality-aware VLM adaptation for edge conditions.
-- [MiniCPM-V: A GPT-4V Level MLLM on Your Phone](https://arxiv.org/abs/2408.01800). arXiv, 2024. A notable on-phone multimodal deployment reference.
-- [MobileLLM-R1: Exploring the Limits of Sub-Billion Language Model Reasoners with Open Training Recipes](https://arxiv.org/abs/2509.24945). arXiv, 2025. Pushes compact reasoning models into the practical edge range.
-- [VaVLM: Toward Efficient Edge-Cloud Video Analytics With Vision-Language Models](https://doi.org/10.1109/tbc.2025.3549983). IEEE Transactions on Broadcasting, 2025. Extends the survey toward video analytics with edge-cloud cooperation.
-- [Industrial Internet of Things with Large Language Models (LLMs): an Intelligence-based Reinforcement Learning Approach](https://doi.org/10.1109/tmc.2024.3522130). IEEE Transactions on Mobile Computing, 2024. Grounds the industrial edge case with stronger reliability constraints.
-- [AIoT Smart Home via Autonomous LLM Agents](https://doi.org/10.1109/jiot.2024.3471904). IEEE Internet of Things Journal, 2024. Shows autonomous agents embedded in smart-home control loops.
-- [V2V-LLM: Vehicle-to-Vehicle Cooperative Autonomous Driving with Multi-Modal Large Language Models](https://arxiv.org/abs/2502.09980). arXiv, 2025. Represents cooperative mobility and vehicular reasoning at the edge.
+- [Application] [Self-adapting Large Visual-Language Models to Edge Devices Across Visual Modalities](https://doi.org/10.1007/978-3-031-73390-1_18). ECCV, 2024. Demonstrates modality-aware VLM adaptation for edge conditions.
+- [Application] [MiniCPM-V: A GPT-4V Level MLLM on Your Phone](https://arxiv.org/abs/2408.01800). arXiv, 2024. A notable on-phone multimodal deployment reference.
+- [Application] [MobileLLM-R1: Exploring the Limits of Sub-Billion Language Model Reasoners with Open Training Recipes](https://arxiv.org/abs/2509.24945). arXiv, 2025. Pushes compact reasoning models into the practical edge range.
+- [Application] [VaVLM: Toward Efficient Edge-Cloud Video Analytics With Vision-Language Models](https://doi.org/10.1109/tbc.2025.3549983). IEEE Transactions on Broadcasting, 2025. Extends the survey toward video analytics with edge-cloud cooperation.
+- [Application] [Industrial Internet of Things with Large Language Models (LLMs): an Intelligence-based Reinforcement Learning Approach](https://doi.org/10.1109/tmc.2024.3522130). IEEE Transactions on Mobile Computing, 2024. Grounds the industrial edge case with stronger reliability constraints.
+- [Application] [AIoT Smart Home via Autonomous LLM Agents](https://doi.org/10.1109/jiot.2024.3471904). IEEE Internet of Things Journal, 2024. Shows autonomous agents embedded in smart-home control loops.
+- [Application] [V2V-LLM: Vehicle-to-Vehicle Cooperative Autonomous Driving with Multi-Modal Large Language Models](https://arxiv.org/abs/2502.09980). arXiv, 2025. Represents cooperative mobility and vehicular reasoning at the edge.
 
 ## Evaluation Checklist | 评测清单
 
