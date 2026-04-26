@@ -74,77 +74,85 @@ Diagram note:
 
 ## Key Literature by Category | 分类别核心文献
 
+The list below emphasizes representative papers that help readers quickly understand what each category contributes to edge deployment research.
+
+下列文献优先选择具有代表性的工作，用于帮助读者快速把握各类别对边缘部署研究分别解决了什么问题。
+
 ### A. Foundations
 
-- Shi et al., Edge Computing: Vision and Challenges, IEEE IoT Journal, 2016. Establishes the classic edge-computing problem setting and resource bottlenecks.
-- Zhou et al., Edge Intelligence, Proceedings of the IEEE, 2019. Connects AI workloads with edge-side orchestration and service constraints.
-- Deng et al., Edge intelligence: The confluence of edge computing and AI, IEEE IoT Journal, 2020. A broader systems survey that helps situate edge AI before the LLM era.
-- Vaswani et al., Attention Is All You Need, NeurIPS, 2017. The architectural origin of the transformer family used by modern LLMs.
-- Brown et al., Language Models are Few-Shot Learners, NeurIPS, 2020. Marks the scale-driven jump toward general-purpose prompting and in-context learning.
-- Wei et al., Emergent Abilities of Large Language Models, TMLR, 2022. Explains why scaling introduces new reasoning behaviors relevant to edge capability preservation.
-- Lu et al., Small Language Models: Survey, Measurements, and Insights, 2024. Useful entry point for compact-model design space.
-- Zheng et al., A Review on Edge Large Language Models: Design, Execution, and Applications, ACM CSUR, 2025. Closest neighboring review on edge-side LLM deployment.
+- Shi et al., Edge Computing: Vision and Challenges, IEEE IoT Journal, 2016. Defines the classical edge-computing setting and the resource bottlenecks inherited by later LLM systems.
+- Zhou et al., Edge Intelligence, Proceedings of the IEEE, 2019. Frames AI-at-the-edge as a joint problem of orchestration, service quality, and distributed resource management.
+- Deng et al., Edge intelligence: The confluence of edge computing and AI, IEEE IoT Journal, 2020. Provides the broader pre-LLM systems context needed to understand why edge intelligence evolved toward cognitive edge computing.
+- Vaswani et al., Attention Is All You Need, NeurIPS, 2017. Supplies the transformer foundation on which most deployable language models are built.
+- Brown et al., Language Models are Few-Shot Learners, NeurIPS, 2020. Establishes scale-driven in-context learning as the capability target that edge deployment tries to preserve.
+- Wei et al., Emergent Abilities of Large Language Models, TMLR, 2022. Explains why scaling changes model behavior and why compression must protect more than perplexity alone.
+- Lu et al., Small Language Models: Survey, Measurements, and Insights, 2024. Maps the compact-model design space that is most relevant to realistic edge deployment.
+- Zheng et al., A Review on Edge Large Language Models: Design, Execution, and Applications, ACM CSUR, 2025. Serves as the closest neighboring review focused specifically on edge-side LLM execution.
 
 ### B. Deployment Challenges
 
-- Gholami et al., A Survey of Quantization Methods for Efficient Neural Network Inference, 2022. Summarizes the compression toolbox that underpins most edge deployment work.
-- Nagel et al., A White Paper on Neural Network Quantization, 2021. Practical reference for quantization failure modes and calibration issues.
-- Kwon et al., Efficient Memory Management for LLM Serving with PagedAttention, SOSP, 2023. Shows why serving memory, not just FLOPs, is a first-order deployment bottleneck.
-- Murthy et al., MobileAIBench: Benchmarking LLMs/LMMs for On-Device Use Cases, 2024. Provides a modern empirical basis for phone-scale and device-scale evaluation.
-- Xiao et al., Understanding Large Language Models in Your Pockets, 2024. Characterizes real on-device performance behavior on commodity mobile hardware.
-- Han et al., LLM Multi-Agent Systems: Challenges and Open Problems, 2024. Important for edge deployments where tool-use amplifies cost, latency, and safety risks.
-- Carlini et al., Extracting Training Data from Large Language Models, USENIX Security, 2021. Canonical reminder that privacy leakage remains a concrete deployment risk.
-- Dwork and Roth, The Algorithmic Foundations of Differential Privacy, 2014. Foundational lens for privacy-preserving edge AI.
+- Gholami et al., A Survey of Quantization Methods for Efficient Neural Network Inference, 2022. Summarizes the compression toolbox that underlies most practical edge-model reduction pipelines.
+- Nagel et al., A White Paper on Neural Network Quantization, 2021. Clarifies calibration errors, accuracy collapse, and other quantization failure modes faced in deployment.
+- Kwon et al., Efficient Memory Management for LLM Serving with PagedAttention, SOSP, 2023. Demonstrates that serving memory and KV-cache behavior are first-order bottlenecks, not secondary implementation details.
+- Murthy et al., MobileAIBench: Benchmarking LLMs/LMMs for On-Device Use Cases, 2024. Provides a device-relevant benchmark basis for assessing realistic mobile and on-device workloads.
+- Xiao et al., Understanding Large Language Models in Your Pockets, 2024. Characterizes the actual runtime behavior of pocket-scale inference on commodity mobile platforms.
+- Han et al., LLM Multi-Agent Systems: Challenges and Open Problems, 2024. Highlights how planning, communication, and tool-use loops amplify latency, cost, and safety pressure at the edge.
+- Carlini et al., Extracting Training Data from Large Language Models, USENIX Security, 2021. Anchors the privacy-leakage threat model that remains relevant for sensitive edge workloads.
+- Dwork and Roth, The Algorithmic Foundations of Differential Privacy, 2014. Provides the formal privacy framework most often used when edge AI must satisfy data minimization requirements.
 
 ### C. Optimization Strategies
 
-- Qin et al., On-device Personalization with Data Selection and Synthesis, DAC, 2024. Represents data-centric optimization rather than model-only optimization.
-- Jacob et al., Quantization and Training for Integer-Arithmetic-Only Inference, CVPR, 2018. Early but still influential efficient-inference baseline.
-- Frantar et al., GPTQ, ICLR, 2023. One of the most widely adopted post-training quantization methods for LLMs.
-- Dettmers et al., QLoRA, NeurIPS, 2023. Key method for efficient adaptation over quantized models.
-- Tan et al., MobileQuant, EMNLP Findings, 2024. Explicitly targets mobile/on-device constraints for language models.
-- Jeon et al., A Frustratingly Easy Post-Training Quantization Scheme for LLMs, EMNLP, 2023. Strong lightweight baseline for practical PTQ comparisons.
-- Lin et al., AWQ, ML Systems, 2024. Activation-aware quantization with strong relevance for deployment.
-- Dao, FlashAttention-2, ICLR, 2024. Kernel-level acceleration for attention-dominated inference.
-- Li et al., EAGLE-2, EMNLP, 2024. Representative decoding-side acceleration work.
-- Zhao et al., QSpec, 2024. Illustrates the interaction between speculative decoding and quantization.
-- Tian et al., Edge-Cloud Collaborative Inference (Survey), 2024. Useful when deployment includes selective cloud assistance.
-- Zhang et al., EdgeShard, IEEE IoTJ, 2024. A practical example of collaborative edge-side inference.
+- Qin et al., On-device Personalization with Data Selection and Synthesis, DAC, 2024. Represents the data-centric path, showing that deployment quality can be improved without relying only on larger models.
+- Jacob et al., Quantization and Training for Integer-Arithmetic-Only Inference, CVPR, 2018. Supplies an early efficient-inference baseline that still informs integer-oriented deployment practice.
+- Frantar et al., GPTQ, ICLR, 2023. Became a standard post-training quantization reference for preserving LLM quality under aggressive compression.
+- Dettmers et al., QLoRA, NeurIPS, 2023. Shows how efficient fine-tuning can be layered on top of quantized models rather than replacing them.
+- Tan et al., MobileQuant, EMNLP Findings, 2024. Targets mobile-specific constraints and therefore connects compression decisions with actual device behavior.
+- Jeon et al., A Frustratingly Easy Post-Training Quantization Scheme for LLMs, EMNLP, 2023. Provides a strong lightweight PTQ baseline for practical comparisons.
+- Lin et al., AWQ, ML Systems, 2024. Uses activation-aware quantization to improve the quality-efficiency balance relevant to deployment.
+- Dao, FlashAttention-2, ICLR, 2024. Represents kernel-level acceleration for attention-dominated inference paths.
+- Li et al., EAGLE-2, EMNLP, 2024. Illustrates decoding-side acceleration where the latency gains come from generation strategy, not only from compression.
+- Zhao et al., QSpec, 2024. Highlights the interaction between speculative decoding and quantized execution.
+- Tian et al., Edge-Cloud Collaborative Inference (Survey), 2024. Summarizes how selective cloud assistance can be integrated when pure local execution is insufficient.
+- Zhang et al., EdgeShard, IEEE IoTJ, 2024. Gives a concrete systems example of collaborative inference across edge resources.
 
 ### D. Agentic Intelligence
 
-- Dorri et al., Multi-agent Systems: A Survey, IEEE Access, 2018. Classical conceptual grounding for agent interaction and coordination.
-- Shen et al., HuggingGPT, 2023. Early influential example of tool-augmented agent orchestration.
-- Han et al., LLM Multi-Agent Systems, 2024. Surveys key system risks, communication issues, and coordination overheads.
-- Yan et al., Communication-Centric Survey of LLM-based Multi-Agent Systems, 2025. Valuable when analyzing communication cost and role design.
-- Belcak et al., Small Language Models are the Future of Agentic AI, 2025. Strong argument for SLM-first deployment under practical cost constraints.
-- Gao et al., A Survey of Self-Evolving Agents, 2025. Covers adaptive and self-improving agent pipelines.
-- Rivkin et al., AIoT Smart Home via Autonomous LLM Agents, 2024. Concrete edge-side agent application case.
+- Dorri et al., Multi-agent Systems: A Survey, IEEE Access, 2018. Provides the classical coordination vocabulary behind later LLM-agent interaction patterns.
+- Shen et al., HuggingGPT, 2023. Offers an early influential example of tool-augmented orchestration rather than single-model prompting.
+- Han et al., LLM Multi-Agent Systems, 2024. Summarizes the major system risks, communication overheads, and coordination costs introduced by multi-agent designs.
+- Yan et al., Communication-Centric Survey of LLM-based Multi-Agent Systems, 2025. Is especially useful for edge settings where communication cost and message topology directly affect feasibility.
+- Belcak et al., Small Language Models are the Future of Agentic AI, 2025. Makes the practical case that SLM-first agents are often better aligned with deployment constraints.
+- Gao et al., A Survey of Self-Evolving Agents, 2025. Covers adaptive agent pipelines where policies and behaviors continue to improve after initial deployment.
+- Rivkin et al., AIoT Smart Home via Autonomous LLM Agents, 2024. Grounds the agent discussion in a concrete edge-resident smart-home case.
 
 ### E. Applications
 
-- Abdin et al., Phi-4 Technical Report, 2024. Compact, high-capability model family useful for edge-oriented comparison.
-- Team Gemma, Gemma Technical Report, 2024. Widely referenced open-family baseline for deployable inference.
-- Mehta et al., OpenELM, 2024. Efficient language model family with explicit design-for-efficiency flavor.
-- Marone et al., mmBERT, 2025. Strong multilingual encoder reference for retrieval-heavy edge pipelines.
-- Chiu et al., V2V-LLM for Cooperative Autonomous Driving, 2025. Illustrates edge reasoning in vehicular collaboration.
-- Hu et al., LLM-based Misbehavior Detection for Connected Autonomous Vehicles, 2025. Shows safety-oriented transport applications.
-- Ren et al., Industrial IoT with LLMs, 2024. Example of industrial intelligence under edge and RL constraints.
-- Hu et al., Realizing Efficient On-Device Language-Based Image Retrieval, 2024. Demonstrates practical retrieval deployment on constrained devices.
+- Abdin et al., Phi-4 Technical Report, 2024. Represents compact but capable model design that is directly relevant to edge-side comparison.
+- Team Gemma, Gemma Technical Report, 2024. Serves as a widely adopted open baseline for deployable language inference.
+- Mehta et al., OpenELM, 2024. Emphasizes efficiency-aware model design instead of treating compression as an afterthought.
+- Marone et al., mmBERT, 2025. Provides a multilingual encoder reference for retrieval-heavy pipelines that may run near the data source.
+- Chiu et al., V2V-LLM for Cooperative Autonomous Driving, 2025. Illustrates cooperative vehicular reasoning where edge latency and coordination both matter.
+- Hu et al., LLM-based Misbehavior Detection for Connected Autonomous Vehicles, 2025. Shows how edge intelligence is used for safety-sensitive transport monitoring.
+- Ren et al., Industrial IoT with LLMs, 2024. Extends the discussion into industrial environments with stronger reliability and control constraints.
+- Hu et al., Realizing Efficient On-Device Language-Based Image Retrieval, 2024. Demonstrates a concrete multimodal retrieval workload that fits constrained devices.
 
 ### F. Evaluation and Trust
 
-- Strubell et al., Energy and Policy Considerations for Modern Deep Learning Research, AAAI, 2020. Remains the standard reminder that efficiency must be reported, not assumed.
-- Dwork and Roth, The Algorithmic Foundations of Differential Privacy, 2014. Core privacy baseline for any sensitive edge workload.
-- Laskaridis et al., Mobile and Edge Evaluation of LLMs, 2024. Useful for benchmarking methodology and realistic deployment framing.
-- Murthy et al., MobileAIBench, 2024. Important for cross-model comparative evaluation on device-relevant tasks.
-- Oliinyk et al., Fuzzing BusyBox with LLM support, USENIX Security, 2024. Shows that LLM-assisted security tooling is now relevant to embedded environments.
-- Ma et al., LLM-assisted fuzzing of IoT device stacks, USENIX Security, 2024. Connects LLM reasoning to IoT vulnerability discovery.
-- Gilbert et al., Large Language Model AI Chatbots Require Approval as Medical Devices, Nature Medicine, 2023. Highlights governance implications in regulated domains.
+- Strubell et al., Energy and Policy Considerations for Modern Deep Learning Research, AAAI, 2020. Reminds the field that efficiency and environmental cost must be reported rather than left implicit.
+- Dwork and Roth, The Algorithmic Foundations of Differential Privacy, 2014. Remains the core privacy baseline for sensitive edge workloads.
+- Laskaridis et al., Mobile and Edge Evaluation of LLMs, 2024. Helps define realistic benchmarking methodology for edge-oriented model comparison.
+- Murthy et al., MobileAIBench, 2024. Supports cross-model evaluation on tasks and devices closer to actual deployment practice.
+- Oliinyk et al., Fuzzing BusyBox with LLM support, USENIX Security, 2024. Shows that LLM-assisted security tooling is now relevant to embedded software stacks.
+- Ma et al., LLM-assisted fuzzing of IoT device stacks, USENIX Security, 2024. Connects model-assisted reasoning with concrete IoT vulnerability discovery workflows.
+- Gilbert et al., Large Language Model AI Chatbots Require Approval as Medical Devices, Nature Medicine, 2023. Highlights the governance and regulatory implications of deploying language systems in sensitive domains.
 
 ## Recent Highlights (2024-2025) | 近两年重点文献
 
 ### Systems and Serving
+
+This line of work pushes edge deployment from proof-of-concept execution toward practical serving stacks that optimize startup cost, generation latency, memory footprint, and accelerator utilization together.
+
+这一方向的研究正把边缘部署从“能跑起来”推进到“可稳定服务”，重点同时优化启动开销、生成时延、显存占用与硬件利用率。
 
 - PowerInfer-2: fast smartphone LLM inference with stronger practical device orientation (2024).
 - EdgeLLM: speculative decoding targeted at fast on-device inference (2024).
@@ -155,6 +163,10 @@ Diagram note:
 
 ### Collaboration and Routing
 
+Recent collaboration work treats routing as a first-class control problem: deciding when to stay local, when to shard, and when to escalate to a stronger remote model under latency and quality constraints.
+
+近期协同研究把路由本身视为一类核心控制问题，即在时延与质量约束下，决定何时本地执行、何时边缘分片、何时升级到更强的远端模型。
+
 - EdgeShard: collaborative edge inference as a systems-level solution to memory and load limits (2024).
 - QoS-aware LLM routing with multiple experts: explicit service-quality optimization for edge routing (2025).
 - CLONE: latency-aware model customization for edge environments (2025).
@@ -163,6 +175,10 @@ Diagram note:
 
 ### Hardware-Aware Acceleration
 
+Hardware-aware studies make it clear that edge LLM progress is not only algorithmic; deployment quality increasingly depends on how models are mapped onto NPUs, PIM, FPGA, and low-bit CPU backends.
+
+硬件感知方向说明，边缘大模型进展并不只是算法改进，部署效果越来越取决于模型如何映射到 NPU、PIM、FPGA 与低比特 CPU 后端。
+
 - Cambricon-LLM: chiplet-based architecture for very large on-device inference (2024).
 - PAISE: PIM-accelerated transformer scheduling engine (2025).
 - FACIL: SoC-PIM cooperative mapping for on-device LLM inference (2025).
@@ -170,6 +186,10 @@ Diagram note:
 - FPGA-based spatial acceleration studies: important for specialized embedded deployments (2024-2025).
 
 ### Multimodal and Domain Deployment
+
+The most visible application trend is that edge intelligence is moving beyond text-only assistants into multimodal perception, smart-home coordination, industrial control, and cooperative mobility.
+
+最明显的应用趋势是，边缘智能正在从纯文本助手扩展到多模态感知、智能家居协同、工业控制与协同交通等场景。
 
 - Self-adapting VLMs for edge modalities (2024).
 - MiniCPM-V on-phone multimodal model (2024).
