@@ -16,14 +16,15 @@ A bilingual, high-density survey README for Cognitive Edge Computing research.
 8. [Category E: Application Domains | 类别E应用场景](#category-e-application-domains--类别e应用场景)
 9. [Category F: Evaluation, Security, and Governance | 类别F评测安全与治理](#category-f-evaluation-security-and-governance--类别f评测安全与治理)
 10. [Curated Paper Index (Normalized Format) | 统一格式论文索引](#curated-paper-index-normalized-format--统一格式论文索引)
-11. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
-12. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
-13. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
-14. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
-15. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
-16. [Citation | 引用信息](#citation--引用信息)
-17. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
-18. [License | 许可证](#license--许可证)
+11. [Extended Coverage: Additional 52 Manuscript References | 扩展覆盖：来自主稿的 52 条补充文献](#extended-coverage-additional-52-manuscript-references--扩展覆盖来自主稿的-52-条补充文献)
+12. [Timeline by Year | 按年份时间线](#timeline-by-year--按年份时间线)
+13. [Task-Oriented Retrieval Matrix | 按任务维度检索矩阵](#task-oriented-retrieval-matrix--按任务维度检索矩阵)
+14. [Journal/Conference Target Mapping | 投稿方向映射](#journalconference-target-mapping--投稿方向映射)
+15. [Survey Delta vs Related Repositories and Surveys | 与相关综述的差异化](#survey-delta-vs-related-repositories-and-surveys--与相关综述的差异化)
+16. [Recommended Reporting Template | 推荐报告模板](#recommended-reporting-template--推荐报告模板)
+17. [Citation | 引用信息](#citation--引用信息)
+18. [Maintenance Rules | 维护规范](#maintenance-rules--维护规范)
+19. [License | 许可证](#license--许可证)
 
 ## Executive Summary | 执行摘要
 
@@ -296,6 +297,67 @@ Format:
 - [E-04] `marone2025mmbert` Marone et al. (2025). mmBERT. arXiv. https://arxiv.org/abs/2509.06888. Efficient multilingual encoder for retrieval.
 - [F-01] `strubell2020energy` Strubell et al. (2020). Energy and Policy Considerations. AAAI. https://doi.org/10.1609/aaai.v34i09.7123. Energy-aware reporting perspective.
 - [F-02] `dwork2014algorithmic` Dwork and Roth (2014). Differential Privacy Foundations. FnT TCS. https://doi.org/10.1561/0400000042. Formal privacy baseline.
+
+## Extended Coverage: Additional 52 Manuscript References | 扩展覆盖：来自主稿的 52 条补充文献
+
+This section expands coverage using bibkey-verified entries from the manuscript bibliography.
+
+本节基于主稿 `references.bib` 自动抽取并人工校核的条目，进一步提升覆盖度。
+
+| ID | Theme | BibKey | Year | Title | Venue |
+|---|---|---|---|---|---|
+| X-01 | Runtime & Serving | `alizadeh2024llm` | 2024 | Llm in a flash: Efficient large language model inference with limited memory | Proceedings of the 62nd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers) |
+| X-02 | Model Optimization | `jeon2023frustratingly` | 2023 | A frustratingly easy post-training quantization scheme for llms | Proceedings of the 2023 Conference on Empirical Methods in Natural Language Processing |
+| X-03 | Model Optimization | `edalati2022kronecker` | 2022 | Kronecker Decomposition for GPT Compression | Proceedings of the 60th Annual Meeting of the Association for Computational Linguistics (Volume 2: Short Papers) |
+| X-04 | Model Optimization | `bai2022towards` | 2022 | Towards efficient post-training quantization of pre-trained language models | Advances in neural information processing systems |
+| X-05 | Model Optimization | `guan2024aptq` | 2024 | Aptq: Attention-aware post-training mixed-precision quantization for large language models | Proceedings of the 61st ACM/IEEE Design Automation Conference |
+| X-06 | Model Optimization | `lin2024awq` | 2024 | Awq: Activation-aware weight quantization for on-device llm compression and acceleration | Proceedings of machine learning and systems |
+| X-07 | Model Optimization | `frantar2023sparsegpt` | 2023 | Sparsegpt: Massive language models can be accurately pruned in one-shot | International conference on machine learning |
+| X-08 | Model Optimization | `qlora2023` | 2023 | Qlora: Efficient finetuning of quantized llms | Advances in neural information processing systems |
+| X-09 | Applications & Benchmarks | `gloeckle2024better` | 2024 | Better \& Faster Large Language Models via Multi-token Prediction | International Conference on Machine Learning |
+| X-10 | Runtime & Serving | `zhao2025fr` | 2025 | Fr-spec: Accelerating large-vocabulary language models via frequency-ranked speculative sampling | arXiv preprint arXiv:2502.14856 |
+| X-11 | Model Optimization | `zhao2024qspec` | 2024 | Qspec: Speculative decoding with complementary quantization schemes | arXiv preprint arXiv:2410.11305 |
+| X-12 | Model Optimization | `zhang2025speculative` | 2025 | Speculative decoding meets quantization: Compatibility evaluation and hierarchical framework design | arXiv preprint arXiv:2505.22179 |
+| X-13 | Runtime & Serving | `sheng2023flexgen` | 2023 | Flexgen: High-throughput generative inference of large language models with a single gpu | International Conference on Machine Learning |
+| X-14 | Runtime & Serving | `zheng2024sglang` | 2024 | Sglang: Efficient execution of structured language model programs | Advances in neural information processing systems |
+| X-15 | Runtime & Serving | `cai2024llmaas` | 2024 | LLMaaS: Serving Large Language Models on Trusted Serverless Computing Platforms | IEEE Transactions on Artificial Intelligence |
+| X-16 | Runtime & Serving | `li2025sled` | 2025 | SLED: A Speculative LLM Decoding Framework for Efficient Edge Serving | arXiv preprint arXiv:2506.09397 |
+| X-17 | Applications & Benchmarks | `kim2025slim` | 2025 | Slim-Llama: A 4.69 mW Large-Language-Model Processor with Binary/Ternary Weights for Billion-Parameter Llama Model | 2025 IEEE International Solid-State Circuits Conference (ISSCC) |
+| X-18 | Model Optimization | `wang2019haq` | 2019 | Haq: Hardware-aware automated quantization with mixed precision | Proceedings of the IEEE/CVF conference on computer vision and pattern recognition |
+| X-19 | Applications & Benchmarks | `capodieci2018deadline` | 2018 | Deadline-based scheduling for GPU with preemption support | 2018 IEEE Real-Time Systems Symposium (RTSS) |
+| X-20 | Runtime & Serving | `kouris2022fluid` | 2022 | Fluid batching: Exit-aware preemptive serving of early-exit neural networks on edge npus | arXiv preprint arXiv:2209.13443 |
+| X-21 | Model Optimization | `ignatov2021real` | 2021 | Real-time quantized image super-resolution on mobile npus, mobile ai 2021 challenge: Report | Proceedings of the IEEE/CVF conference on computer vision and pattern recognition |
+| X-22 | Applications & Benchmarks | `cho2021farnn` | 2021 | FARNN: FPGA-GPU hybrid acceleration platform for recurrent neural networks | IEEE Transactions on Parallel and Distributed Systems |
+| X-23 | Runtime & Serving | `choudhury2022fpga` | 2022 | An FPGA overlay for CNN inference with fine-grained flexible parallelism | ACM Transactions on Architecture and Code Optimization (TACO) |
+| X-24 | Applications & Benchmarks | `yang2023processing` | 2023 | Processing-in-memory using optically-addressed phase change memory | 2023 IEEE/ACM International Symposium on Low Power Electronics and Design (ISLPED) |
+| X-25 | Runtime & Serving | `yi2023edgemoe` | 2023 | Edgemoe: Fast on-device inference of moe-based large language models | arXiv preprint arXiv:2308.14352 |
+| X-26 | Collaboration & Deployment | `yi2025edgemoe` | 2025 | Edgemoe: Empowering sparse large language models on mobile devices | IEEE Transactions on Mobile Computing |
+| X-27 | Applications & Benchmarks | `li2024locmoe` | 2024 | LocMoE: a low-overhead MoE for large language model training | Proceedings of the Thirty-Third International Joint Conference on Artificial Intelligence |
+| X-28 | Applications & Benchmarks | `shen2024jetmoe` | 2024 | Jetmoe: Reaching llama2 performance with 0.1 m dollars | arXiv preprint arXiv:2404.07413 |
+| X-29 | Applications & Benchmarks | `shazeer2017sparsely` | 2017 | The sparsely-gated mixture-of-experts layer | Outrageously large neural networks |
+| X-30 | Collaboration & Deployment | `qin2024enabling` | 2024 | Enabling on-device large language model personalization with self-supervised data selection and synthesis | Proceedings of the 61st ACM/IEEE Design Automation Conference |
+| X-31 | Applications & Benchmarks | `tirumala2023d4` | 2023 | D4: Improving llm pretraining via document de-duplication and diversification | Advances in Neural Information Processing Systems |
+| X-32 | Applications & Benchmarks | `marone2025mmbert` | 2025 | mmBERT: A Modern Multilingual Encoder with Annealed Language Learning | arXiv preprint arXiv:2509.06888 |
+| X-33 | Applications & Benchmarks | `wu2025livelongbench` | 2025 | LiveLongBench: Tackling Long-Context Understanding for Spoken Texts from Live Streams | arXiv preprint arXiv:2504.17366 |
+| X-34 | Collaboration & Deployment | `xiao2024understanding` | 2024 | Understanding Large Language Models in Your Pockets: Performance Study on COTS Mobile Devices | arXiv preprint arXiv:2410.03613 |
+| X-35 | Collaboration & Deployment | `laskaridismobile` |  | Mobile and edge evaluation of large language models | Workshop on Efficient Systems for Foundation Models II |
+| X-36 | Collaboration & Deployment | `murthy2024mobileaibench` | 2024 | Mobileaibench: Benchmarking llms and lmms for on-device use cases | arXiv preprint arXiv:2406.10290 |
+| X-37 | Collaboration & Deployment | `xu2024device` | 2024 | On-device language models: A comprehensive review | arXiv preprint arXiv:2409.00088 |
+| X-38 | Collaboration & Deployment | `zheng2025review` | 2025 | A review on edge large language models: Design, execution, and applications | ACM Computing Surveys |
+| X-39 | Survey & Foundations | `lu2024small` | 2024 | Small language models: Survey, measurements, and insights | arXiv preprint arXiv:2409.15790 |
+| X-40 | Survey & Foundations | `van2024survey` | 2024 | A survey of small language models | arXiv preprint arXiv:2410.20011 |
+| X-41 | Collaboration & Deployment | `team2025minicpm4` | 2025 | Minicpm4: Ultra-efficient llms on end devices | arXiv preprint arXiv:2506.07900 |
+| X-42 | Model Optimization | `abouelenin2025phi` | 2025 | Phi-4-mini technical report: Compact yet powerful multimodal language models via mixture-of-loras | arXiv preprint arXiv:2503.01743 |
+| X-43 | Agent Systems | `han2024llm` | 2024 | LLM multi-agent systems: Challenges and open problems | arXiv preprint arXiv:2402.03578 |
+| X-44 | Agent Systems | `yan2025beyond` | 2025 | Beyond self-talk: A communication-centric survey of llm-based multi-agent systems | arXiv preprint arXiv:2502.14321 |
+| X-45 | Agent Systems | `gao2025survey` | 2025 | A survey of self-evolving agents: On path to artificial super intelligence | arXiv preprint arXiv:2507.21046 |
+| X-46 | Agent Systems | `shen2023hugginggpt` | 2023 | Hugginggpt: Solving ai tasks with chatgpt and its friends in hugging face | Advances in Neural Information Processing Systems |
+| X-47 | Security & Trust | `carlini2021extracting` | 2021 | Extracting training data from large language models | 30th USENIX security symposium (USENIX Security 21) |
+| X-48 | Survey & Foundations | `dwork2014algorithmic` | 2014 | The algorithmic foundations of differential privacy | Foundations and trends{\textregistered} in theoretical computer science |
+| X-49 | Collaboration & Deployment | `ali2022federated` | 2022 | Federated learning for privacy preservation in smart healthcare systems: A comprehensive survey | IEEE journal of biomedical and health informatics |
+| X-50 | Applications & Benchmarks | `strubell2020energy` | 2020 | Energy and policy considerations for modern deep learning research | Proceedings of the AAAI conference on artificial intelligence |
+| X-51 | Runtime & Serving | `yuan2025local` | 2025 | Local-Cloud Inference Offloading for LLMs in Multi-Modal, Multi-Task, Multi-Dialogue Settings | arXiv preprint arXiv:2502.11007 |
+| X-52 | Collaboration & Deployment | `tian2024edge` | 2024 | An edge-cloud collaboration framework for generative ai service provision with synergetic big cloud model and small edge models | IEEE Network |
 
 ## Timeline by Year | 按年份时间线
 
