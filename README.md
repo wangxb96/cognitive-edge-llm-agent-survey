@@ -61,6 +61,18 @@ For release drafting text:
 
 - `assets/reproducibility/docs/RELEASE_NOTES_TEMPLATE.md`
 
+### 30-Second Reproduction | 30秒快速复现
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r assets/reproducibility/requirements.txt
+cd assets/reproducibility
+python3 scripts/rebuild_clean_server_artifacts.py --root . --device kindlab_R203 --required-contexts 512,1024,2048,4096
+```
+
+Expected outputs include `analysis/server_suite_aggregated.csv` and benchmark figures under `figures/`.
+
 ## Visual Snapshot | 图示概览
 
 The figure below illustrates a central message of the survey: edge deployment is a multi-objective problem, and no single model dominates quality and latency simultaneously.
