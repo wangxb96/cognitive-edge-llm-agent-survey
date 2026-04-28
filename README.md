@@ -49,6 +49,18 @@ The focus is deployment realism at the edge: reasoning quality, latency stabilit
 - Systems: on-device inference, edge serving, optional cloud collaboration, agent tool-use loops
 - Objectives: quality-preserving optimization, efficient serving, trustworthy deployment
 
+## Reproducibility Artifacts | 可复现实验代码
+
+Core scripts and instructions used for the TKDE resubmission benchmark artifacts are available in:
+
+- `TKDE_Resubmission_2026/ARTIFACT_REPRODUCIBILITY.md`
+- `TKDE_Resubmission_2026/requirements.txt`
+- `TKDE_Resubmission_2026/scripts/`
+
+For release drafting text:
+
+- `TKDE_Resubmission_2026/docs/GITHUB_RELEASE_NOTES_TKDE_2026.md`
+
 ## Visual Snapshot | 图示概览
 
 The figure below illustrates a central message of the survey: edge deployment is a multi-objective problem, and no single model dominates quality and latency simultaneously.
