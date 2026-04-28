@@ -1,4 +1,4 @@
-# Artifact Reproducibility (TKDE Resubmission 2026)
+# Artifact Reproducibility Guide
 
 This document provides the minimal reproducibility path for the manuscript artifacts in this folder.
 
@@ -23,7 +23,7 @@ Install dependencies from the project root:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r TKDE_Resubmission_2026/requirements.txt
+pip install -r assets/reproducibility/requirements.txt
 ```
 
 ## Reproduce Main Benchmark Figures
@@ -31,7 +31,7 @@ pip install -r TKDE_Resubmission_2026/requirements.txt
 From repository root:
 
 ```bash
-cd TKDE_Resubmission_2026
+cd assets/reproducibility
 python3 scripts/rebuild_clean_server_artifacts.py \
   --root . \
   --device kindlab_R203 \
@@ -53,7 +53,7 @@ Expected outputs:
 If Ollama and models are available locally:
 
 ```bash
-cd TKDE_Resubmission_2026
+cd assets/reproducibility
 python3 scripts/run_ollama_server_suite.py \
   --models qwen3:8b,llama2:7b,gemma3:4b,gpt-oss:20b,deepseek-r1:14b \
   --contexts 512,1024,2048,4096 \
@@ -73,10 +73,4 @@ Then regenerate clean artifacts and figures with `rebuild_clean_server_artifacts
 ## Notes
 
 - Plot generation automatically avoids unusable summary snapshots and prefers valid benchmark batches.
-- For manuscript packaging, use:
-
-```bash
-./scripts/build_submission.sh
-```
-
-- The generated zip is `TKDE_Resubmission_2026_package.zip`.
+- This subfolder focuses on benchmark reproduction. Packaging scripts are intentionally excluded from this public subset.

@@ -51,15 +51,15 @@ The focus is deployment realism at the edge: reasoning quality, latency stabilit
 
 ## Reproducibility Artifacts | 可复现实验代码
 
-Core scripts and instructions used for the TKDE resubmission benchmark artifacts are available in:
+Core scripts and instructions used for benchmark artifact reproduction are available in:
 
-- `TKDE_Resubmission_2026/ARTIFACT_REPRODUCIBILITY.md`
-- `TKDE_Resubmission_2026/requirements.txt`
-- `TKDE_Resubmission_2026/scripts/`
+- `assets/reproducibility/ARTIFACT_REPRODUCIBILITY.md`
+- `assets/reproducibility/requirements.txt`
+- `assets/reproducibility/scripts/`
 
 For release drafting text:
 
-- `TKDE_Resubmission_2026/docs/GITHUB_RELEASE_NOTES_TKDE_2026.md`
+- `assets/reproducibility/docs/RELEASE_NOTES_TEMPLATE.md`
 
 ## Visual Snapshot | 图示概览
 

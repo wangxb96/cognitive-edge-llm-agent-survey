@@ -1,16 +1,16 @@
-# TKDE Resubmission 2026 - Artifact Release Notes
+# Artifact Release Notes Template
 
 ## Title
 
-TKDE 2026 Artifact Package: Cognitive Edge Computing Survey
+Cognitive Edge Computing Survey: Reproducibility Artifacts
 
 ## Suggested Tag
 
-v1.0-tkde-resubmission-2026
+v1.0-artifacts
 
 ## Summary
 
-This release provides the reproducibility artifacts for the manuscript:
+This release provides reproducibility artifacts for the manuscript:
 
 **Cognitive Edge Computing: A Survey on Optimizing Large Language Models and Autonomous Agents for the Edge**.
 
@@ -27,11 +27,6 @@ It includes benchmark runners, cleaned aggregation pipelines, and plotting scrip
   - `scripts/plot_benchmark_results.py`
 - Reproducibility docs:
   - `ARTIFACT_REPRODUCIBILITY.md`
-  - `docs/KINDLAB_R203_SERVER_RUN_GUIDE.md`
-- Example artifacts and outputs:
-  - `data/`
-  - `analysis/`
-  - `figures/`
 
 ## Quick Reproduction
 
@@ -40,9 +35,9 @@ From repository root:
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r TKDE_Resubmission_2026/requirements.txt
+pip install -r assets/reproducibility/requirements.txt
 
-cd TKDE_Resubmission_2026
+cd assets/reproducibility
 python3 scripts/rebuild_clean_server_artifacts.py \
   --root . \
   --device kindlab_R203 \
@@ -62,8 +57,8 @@ Expected regenerated outputs include:
 
 - The pipeline excludes failed benchmark rows (`oom_or_fail=1`) when producing final clean artifacts.
 - The plotting pipeline validates summary usability and falls back to valid matrix-derived batches when needed.
-- The manuscript build is packaged via `scripts/build_submission.sh`.
+- The public subset focuses on benchmark reproduction scripts and figure/table regeneration.
 
 ## Citation
 
-If this artifact is useful, please cite the associated manuscript submission and repository release/tag.
+If this artifact is useful, please cite the associated manuscript and repository release/tag.
