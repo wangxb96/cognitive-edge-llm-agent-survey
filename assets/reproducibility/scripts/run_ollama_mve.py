@@ -81,7 +81,7 @@ def append_matrix_rows(rows):
             writer.writerow([
                 r["run_id"],
                 r["date"],
-                "kindlab_r203_sim_local",
+                "local_mve_host",
                 r["model"],
                 r["quantization"],
                 r["context_len"],

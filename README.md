@@ -2,7 +2,7 @@
 
 A focused companion to the cognitive-edge version of the survey, covering LLMs and agents under deployment constraints.
 
-**Reading route.** Use the [integrated guide](https://github.com/wangxb96/Awesome-EdgeAI) for the current literature map, figures and public supplement. This repository retains the focused guide and the original benchmark-script snapshots. The [server archive](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/server) provides recovered request data, corrected metric definitions and supported offline recalculation.
+**Reading route.** This repository is the focused companion to the 2025 v2 survey. Use the [integrated guide](https://github.com/wangxb96/Awesome-EdgeAI) for the current literature map and maintained research artifacts. The [server archive](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/server) is the current source for recovered request data, corrected metric definitions and supported offline recalculation.
 
 认知边缘计算综述导航：聚焦大模型与智能体在边缘场景中的可部署优化。
 
@@ -55,7 +55,7 @@ The focus is deployment realism at the edge: reasoning quality, latency stabilit
 
 | Material | Location and use |
 |---|---|
-| Current supplement | [PDF and source](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/supplement), including the historical server record and its limits |
+| Current supplement | [PDF](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/supplement), including the historical server record and its limits; editable submission sources are not distributed |
 | Recovered empirical data | [Server archive and offline analysis](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/server), with thirteen campaigns, tasks, failures and descriptive reanalysis |
 | Figure sources | [Editable catalogue](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/figures), with source inputs and vector exports |
 | Original script snapshots | [Runner](assets/reproducibility/scripts/run_ollama_server_suite.py), [selector](assets/reproducibility/scripts/rebuild_clean_server_artifacts.py), [plotter](assets/reproducibility/scripts/plot_benchmark_results.py); these assume the earlier project layout |
@@ -63,7 +63,7 @@ The focus is deployment realism at the edge: reasoning quality, latency stabilit
 For supported offline recalculation, clone the integrated repository and run:
 
 ```sh
-git clone --branch supplement-2026-11-13-v4 https://github.com/wangxb96/Awesome-EdgeAI.git
+git clone --branch public-artifacts-2026-11-13-v5 https://github.com/wangxb96/Awesome-EdgeAI.git
 cd Awesome-EdgeAI
 python3 survey/server/analyze_archived.py
 ```
@@ -74,11 +74,11 @@ This recalculates the archived records without invoking a model. Exact historica
 
 ## Visual Snapshot | 图示概览
 
-![Task and resource loops in cognitive edge computing](https://raw.githubusercontent.com/wangxb96/Awesome-EdgeAI/supplement-2026-11-13-v4/survey/figures/cognitive_edge_overview.png)
+![Task and resource loops in cognitive edge computing](https://raw.githubusercontent.com/wangxb96/Awesome-EdgeAI/public-artifacts-2026-11-13-v5/survey/figures/cognitive_edge_overview.png)
 
-The conceptual figure connects task acceptance, context/reasoning/action and resource adaptation across device, edge and cloud. It encodes no measured performance. The [source and vector exports](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/figures) are public.
+The conceptual figure connects task acceptance, context/reasoning/action and resource adaptation across device, edge and cloud. It encodes no measured performance. The [figure catalogue](https://github.com/wangxb96/Awesome-EdgeAI/tree/public-artifacts-2026-11-13-v5/survey/figures) includes source and vector exports.
 
-概念图展示任务与资源调整的闭环，图形位置不表示实验性能。历史服务器观测应结合[重分析与测量边界](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/server)阅读，不能据此作跨硬件的能力排名。
+概念图展示任务与资源调整的闭环，图形位置不表示实验性能。历史服务器观测应结合[重分析与测量边界](https://github.com/wangxb96/Awesome-EdgeAI/tree/public-artifacts-2026-11-13-v5/survey/server)阅读，不能据此作跨硬件的能力排名。
 
 ## Taxonomy | 分类框架
 
@@ -282,4 +282,4 @@ Version repositories: [data/model/system guide](https://github.com/wangxb96/Awes
 
 ## License | 许可证
 
-Released under the repository LICENSE.
+The MIT terms in [LICENSE](LICENSE) cover software/code files only. The survey narrative, publication PDFs, original artwork, and third-party material are not granted under that license.

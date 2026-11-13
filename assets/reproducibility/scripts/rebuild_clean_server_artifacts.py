@@ -105,7 +105,7 @@ def pick_latest_complete_per_model(rows, required_contexts):
 def main():
     parser = argparse.ArgumentParser(description="Rebuild clean server benchmark artifacts from latest valid summary rows.")
     parser.add_argument("--root", default=".")
-    parser.add_argument("--device", default="kindlab_R203")
+    parser.add_argument("--device", default="server")
     parser.add_argument("--required-contexts", default="512,1024,2048,4096")
     parser.add_argument("--clean-summary", default="analysis/server_suite_summary_clean_latest_valid.json")
     parser.add_argument("--out-csv", default="analysis/server_suite_aggregated.csv")

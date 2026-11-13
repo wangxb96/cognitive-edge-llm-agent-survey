@@ -4,10 +4,10 @@ This folder retains original runner, selector and plotting sources from the focu
 
 ## Current public record
 
-Use the [integrated server archive](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/server) for the recovered empirical requests, summaries, task definitions, campaign/failure ledger and descriptive reanalysis. The [supplement](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/supplement) defines the interpretation boundaries. The [figure catalogue](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/figures) provides supported redraw sources and inputs.
+Use the [integrated server archive](https://github.com/wangxb96/Awesome-EdgeAI/tree/public-artifacts-2026-11-13-v5/survey/server) for the recovered empirical requests, summaries, task definitions, campaign/failure ledger and descriptive reanalysis. The [supplement PDF](https://github.com/wangxb96/Awesome-EdgeAI/tree/public-artifacts-2026-11-13-v5/survey/supplement) defines the interpretation boundaries. The [figure catalogue](https://github.com/wangxb96/Awesome-EdgeAI/tree/public-artifacts-2026-11-13-v5/survey/figures) provides redraw sources and inputs.
 
 ```sh
-git clone --branch supplement-2026-11-13-v4 https://github.com/wangxb96/Awesome-EdgeAI.git
+git clone --branch public-artifacts-2026-11-13-v5 https://github.com/wangxb96/Awesome-EdgeAI.git
 cd Awesome-EdgeAI
 python3 survey/server/analyze_archived.py
 ```

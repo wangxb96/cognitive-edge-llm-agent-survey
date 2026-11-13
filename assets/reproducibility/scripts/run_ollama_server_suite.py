@@ -268,7 +268,7 @@ def parse_args():
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--timeout", type=int, default=300)
     parser.add_argument("--warmup-words", type=int, default=160)
-    parser.add_argument("--device", default="kindlab_r203")
+    parser.add_argument("--device", default="server")
     return parser.parse_args()
 
 

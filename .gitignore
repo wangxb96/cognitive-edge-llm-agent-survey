@@ -1,0 +1,4 @@
+# Editable manuscript and TeX build inputs are maintained outside this repository.
+*.tex
+*.sty
+*.bst

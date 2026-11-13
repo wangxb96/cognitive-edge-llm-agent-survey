@@ -16,8 +16,7 @@ MODEL_DISPLAY_NAMES = {
 }
 
 DEVICE_LABELS = {
-    "kindlab_r203": "4x RTX 4090 D server",
-    "kindlab_R203": "4x RTX 4090 D server",
+    "server": "reported server",
 }
 
 
@@ -578,7 +577,7 @@ def main():
     parser = argparse.ArgumentParser(description="Generate benchmark figures and aggregated table from experiment_matrix.csv")
     parser.add_argument("--matrix", default="experiments/experiment_matrix.csv")
     parser.add_argument("--summary-json", default="data/server_suite_summary_latest.json")
-    parser.add_argument("--device", default="kindlab_r203")
+    parser.add_argument("--device", default="server")
     parser.add_argument("--figures-dir", default="figures")
     parser.add_argument("--out-csv", default="analysis/server_suite_aggregated.csv")
     args = parser.parse_args()
