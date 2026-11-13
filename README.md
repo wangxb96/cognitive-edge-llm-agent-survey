@@ -1,6 +1,8 @@
 # Cognitive Edge Computing Survey: LLMs and AI Agents for Edge Deployment
 
-A concise, professional survey map for deploying large models and AI agents under real edge constraints.
+A focused companion to the cognitive-edge version of the survey, covering LLMs and agents under deployment constraints.
+
+**Reading route.** Use the [integrated guide](https://github.com/wangxb96/Awesome-EdgeAI) for the current literature map, figures and public supplement. This repository retains the focused guide and the original benchmark-script snapshots. The [server archive](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/server) provides recovered request data, corrected metric definitions and supported offline recalculation.
 
 认知边缘计算综述导航：聚焦大模型与智能体在边缘场景中的可部署优化。
 
@@ -49,41 +51,34 @@ The focus is deployment realism at the edge: reasoning quality, latency stabilit
 - Systems: on-device inference, edge serving, optional cloud collaboration, agent tool-use loops
 - Objectives: quality-preserving optimization, efficient serving, trustworthy deployment
 
-## Reproducibility Artifacts | 可复现实验代码
+## Reproducibility Artifacts | 可复现材料
 
-Core scripts and instructions used for benchmark artifact reproduction are available in:
+| Material | Location and use |
+|---|---|
+| Current supplement | [PDF and source](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/supplement), including the historical server record and its limits |
+| Recovered empirical data | [Server archive and offline analysis](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/server), with thirteen campaigns, tasks, failures and descriptive reanalysis |
+| Figure sources | [Editable catalogue](https://github.com/wangxb96/Awesome-EdgeAI/tree/main/survey/figures), with source inputs and vector exports |
+| Original script snapshots | [Runner](assets/reproducibility/scripts/run_ollama_server_suite.py), [selector](assets/reproducibility/scripts/rebuild_clean_server_artifacts.py), [plotter](assets/reproducibility/scripts/plot_benchmark_results.py); these assume the earlier project layout |
 
-- `assets/reproducibility/ARTIFACT_REPRODUCIBILITY.md`
-- `assets/reproducibility/requirements.txt`
-- `assets/reproducibility/scripts/`
+For supported offline recalculation, clone the integrated repository and run:
 
-For release drafting text:
-
-- `assets/reproducibility/docs/RELEASE_NOTES_TEMPLATE.md`
-
-### 30-Second Reproduction | 30秒快速复现
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r assets/reproducibility/requirements.txt
-cd assets/reproducibility
-python3 scripts/rebuild_clean_server_artifacts.py --root . --device kindlab_R203 --required-contexts 512,1024,2048,4096
+```sh
+git clone --branch supplement-2026-11-13-v4 https://github.com/wangxb96/Awesome-EdgeAI.git
+cd Awesome-EdgeAI
+python3 survey/server/analyze_archived.py
 ```
 
-Expected outputs include `analysis/server_suite_aggregated.csv` and benchmark figures under `figures/`.
+This recalculates the archived records without invoking a model. Exact historical checkpoint/template, precision, runtime/driver/placement and complete power/response traces were not retained. Script defaults do not establish execution-time settings, so this is not identical experimental re-execution.
+
+原始脚本用于追溯评分、请求计时、功耗代理和旧版结果选择逻辑。可离线复算的数据及入口位于上表所列的当前公开归档。四卡 RTX 4090 D 的历史记录不能直接验证移动端性能，回答包含分数也不能解释为模型推理能力排名。
 
 ## Visual Snapshot | 图示概览
 
-The figure below illustrates a central message of the survey: edge deployment is a multi-objective problem, and no single model dominates quality and latency simultaneously.
+![Task and resource loops in cognitive edge computing](https://raw.githubusercontent.com/wangxb96/Awesome-EdgeAI/supplement-2026-11-13-v4/survey/figures/cognitive_edge_overview.png)
 
-下图体现了本文综述的一个核心判断：边缘部署本质上是多目标权衡问题，不存在在质量与时延上同时绝对占优的统一模型。
+The conceptual figure connects task acceptance, context/reasoning/action and resource adaptation across device, edge and cloud. It encodes no measured performance. The [source and vector exports](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/figures) are public.
 
-![Latency-quality frontier on edge hardware](assets/latency-quality-frontier.png)
-
-Figure note:
-- EN: A synchronized benchmark on a 4x RTX 4090 D server shows that GPT-OSS 20B is the green upper-right cluster around 730 ms and 0.98 quality, Llama2 7B remains attractive on latency/efficiency, and Gemma3 4B is the red cluster centered near 495 ms and 0.92 quality. This is exactly why edge deployment must be analyzed as a trade-off surface rather than a single ranking.
-- 中文：在 4x RTX 4090 D 平台上的同步实验表明，GPT-OSS 20B 对应图中右上方的绿色点簇，约位于 730 ms 和 0.98 质量附近；Llama2 7B 在时延/效率上仍具吸引力；Gemma3 4B 对应约 495 ms 和 0.92 质量附近的红色点簇。这说明边缘部署必须以“权衡前沿”而不是“单一排名”来分析。
+概念图展示任务与资源调整的闭环，图形位置不表示实验性能。历史服务器观测应结合[重分析与测量边界](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/server)阅读，不能据此作跨硬件的能力排名。
 
 ## Taxonomy | 分类框架
 
@@ -259,18 +254,31 @@ Recommended minimum report for each study:
 
 ## Citation | 引用信息
 
-If this repository is useful for your research, please cite:
+The two records are versions of the same arXiv manuscript. Cite the version used; v1 is the initial data/model/system preprint, and v2 introduces the cognitive-edge framing.
 
-如果本仓库对你的研究有帮助，请引用：
+两条记录属于同一篇预印本的不同版本，引用时请注明实际使用的版本。
 
 ```bibtex
-@article{wang2025cognitive,
-  title={Cognitive edge computing: A comprehensive survey on optimizing large models and AI agents for pervasive deployment},
+@article{wang2025optimizing_v1,
+  title={Optimizing Edge AI: A Comprehensive Survey on Data, Model, and System Strategies},
+  author={Wang, Xubin and Jia, Weijia},
+  journal={arXiv preprint arXiv:2501.03265v1},
+  year={2025},
+  note={Version 1, January 4, 2025},
+  url={https://arxiv.org/abs/2501.03265v1}
+}
+
+@article{wang2025cognitive_v2,
+  title={Cognitive Edge Computing: A Comprehensive Survey on Optimizing Large Models and AI Agents for Pervasive Deployment},
   author={Wang, Xubin and Li, Qing and Jia, Weijia},
-  journal={arXiv preprint arXiv:2501.03265},
-  year={2025}
+  journal={arXiv preprint arXiv:2501.03265v2},
+  year={2025},
+  note={Version 2, November 7, 2025},
+  url={https://arxiv.org/abs/2501.03265v2}
 }
 ```
+
+Version repositories: [data/model/system guide](https://github.com/wangxb96/Awesome-EdgeAI) · [cognitive-edge focused guide](https://github.com/wangxb96/cognitive-edge-llm-agent-survey).
 
 ## License | 许可证
 

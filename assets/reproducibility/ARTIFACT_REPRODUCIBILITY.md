@@ -1,76 +1,33 @@
-# Artifact Reproducibility Guide
+# Benchmark script provenance and supported recalculation
 
-This document provides the minimal reproducibility path for the manuscript artifacts in this folder.
+This folder retains original runner, selector and plotting sources from the focused survey project. These files assume that project's earlier directory layout. The repository does not include the historical request CSVs, summary JSONs or experiment matrix needed by the old figure-rebuild command.
 
-## Scope
+## Current public record
 
-The public artifact subset includes:
+Use the [integrated server archive](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/server) for the recovered empirical requests, summaries, task definitions, campaign/failure ledger and descriptive reanalysis. The [supplement](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/supplement) defines the interpretation boundaries. The [figure catalogue](https://github.com/wangxb96/Awesome-EdgeAI/tree/supplement-2026-11-13-v4/survey/figures) provides supported redraw sources and inputs.
 
-- Benchmark runner scripts for Ollama-based model evaluation.
-- Post-processing scripts for clean summary generation.
-- Plot scripts for the main benchmark figures.
-- Raw/summary data examples and aggregated outputs.
-
-## Environment
-
-- Python: 3.10+
-- OS: Linux/macOS
-- Optional for power metrics: NVIDIA GPU + `nvidia-smi`
-- Optional for model serving: Ollama
-
-Install dependencies from the project root:
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r assets/reproducibility/requirements.txt
+```sh
+git clone --branch supplement-2026-11-13-v4 https://github.com/wangxb96/Awesome-EdgeAI.git
+cd Awesome-EdgeAI
+python3 survey/server/analyze_archived.py
 ```
 
-## Reproduce Main Benchmark Figures
+The analysis uses Python 3.9+ and the standard library. It invokes no model and makes no network calls after the clone. Figure redrawing and supplement compilation require the dependencies documented in their respective directories.
 
-From repository root:
+## What the older scripts establish
 
-```bash
-cd assets/reproducibility
-python3 scripts/rebuild_clean_server_artifacts.py \
-  --root . \
-  --device kindlab_R203 \
-  --required-contexts 512,1024,2048,4096
-```
+| Snapshot | Inspectable behavior |
+|---|---|
+| [Runner](scripts/run_ollama_server_suite.py) | Ten task prompts/answers, normalized answer-containment scoring, request timing and two-endpoint GPU-power proxy |
+| [Selector](scripts/rebuild_clean_server_artifacts.py) | Earlier latest-complete-per-model summary selection, including why campaigns can be mixed |
+| [Plotter](scripts/plot_benchmark_results.py) | Earlier aggregate-table and figure construction |
 
-Expected outputs:
+The runner and selector match the copies in the integrated server archive. Their defaults are source-level information, not a record of the exact options used in historical execution. Running them with new models would produce a new experiment rather than reproduce the old execution.
 
-- `analysis/server_suite_summary_clean_latest_valid.json`
-- `analysis/server_suite_aggregated.csv`
-- `figures/kindlab_R203_latency_vs_quality.{png,pdf}`
-- `figures/kindlab_R203_throughput_by_model.{png,pdf}`
-- `figures/kindlab_R203_ttft_p95.{png,pdf}`
-- `figures/kindlab_R203_quality_heatmap.{png,pdf}`
-- `figures/kindlab_R203_energy_profile.{png,pdf}`
+## Measurement limits
 
-## Run a New Server Suite (Optional)
+The historical score is answer containment rather than strict exact match. The field named TTFT is prompt-evaluation duration, and energy is an unvalidated endpoint GPU-power proxy. Actual prompt length differs from configured context ceilings. Campaigns, empty response fields and failures must be inspected before interpreting the results.
 
-If Ollama and models are available locally:
+Exact historical checkpoint/template, precision, runtime/driver/placement, command-line settings and complete power/response traces were not retained. Recalculation is supported; identical model execution, causal capability rankings and transfer to mobile devices are not established.
 
-```bash
-cd assets/reproducibility
-python3 scripts/run_ollama_server_suite.py \
-  --models qwen3:8b,llama2:7b,gemma3:4b,gpt-oss:20b,deepseek-r1:14b \
-  --contexts 512,1024,2048,4096 \
-  --repeats 1 \
-  --max-tokens 128 \
-  --device kindlab_R203
-```
-
-This produces:
-
-- `data/server_suite_raw_<timestamp>.csv`
-- `data/server_suite_summary_<timestamp>.json`
-- Appended rows in `experiments/experiment_matrix.csv`
-
-Then regenerate clean artifacts and figures with `rebuild_clean_server_artifacts.py`.
-
-## Notes
-
-- Plot generation automatically avoids unusable summary snapshots and prefers valid benchmark batches.
-- This subfolder focuses on benchmark reproduction. Packaging scripts are intentionally excluded from this public subset.
+[Back to the focused guide](../../README.md)
